@@ -1,2 +1,4 @@
-site_name: My David Docs Test
+site_name: DaviidAM Blog
 site_url: https://daviidam.github.io/Blog
+theme:
+  name: material
