@@ -1,4 +1,5 @@
-# 👋 ¡Bienvenido a DaviidAM Blog!
+# Home
+## 👋 ¡Bienvenido a DaviidAM Blog!
 
 Hola y gracias por visitar mi rincón digital. Soy David, un apasionado de de la tecnología y el software. Este blog es mi espacio para documentar, explorar y compartir todo lo que voy aprendiendo en el camino.
 
