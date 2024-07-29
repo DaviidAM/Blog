@@ -27,14 +27,14 @@ nav:
   - Learning:
       - Python:
           - Básico:
-              - "Python/básico/1 - Fundamentos del lenguaje.md"
-              - "Python/básico/2 - Operadores.md"
-              - "Python/básico/3 - Estructuras Condicionales.md"
-              - "Python/básico/4 - Bucles.md"
-              - "Python/básico/5 - Funciones.md"
-              - "Python/básico/6 - Ambito de variables.md"
+              - "Python/basic/1 - Fundamentos del lenguaje.md"
+              - "Python/basic/2 - Operadores.md"
+              - "Python/basic/3 - Estructuras Condicionales.md"
+              - "Python/basic/4 - Bucles.md"
+              - "Python/basic/5 - Funciones.md"
+              - "Python/basic/6 - Ambito de variables.md"
       - Terraform:
           - Básico:
-              - "Terraform/01 - Introduction.md"
-              - "Terraform/02 - Configurations.md"
-              - "Terraform/03 - Infrastructure.md"
+              - "Terraform/basic/01 - Introduction.md"
+              - "Terraform/basic/02 - Configurations.md"
+              - "Terraform/basic/03 - Infrastructure.md"
