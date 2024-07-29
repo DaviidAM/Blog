@@ -24,6 +24,6 @@ extra_javascript:
 
 nav:
   - Home:
-      - index.md
+      - /index.md
   - Python:
-      - Python/
+      - /Python/
