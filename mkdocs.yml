@@ -27,8 +27,8 @@ nav:
   - Learning:
       - Python:
           - Básico:
-              - Python/basic/1 - Fundamentos del lenguaje.md
-              - Python/basic/2 - Operadores.md
+              - "Python/basic/1 - Fundamentos del lenguaje.md"
+              - "Python/basic/2 - Operadores.md"
               - "Python/basic/3 - Estructuras Condicionales.md"
               - "Python/basic/4 - Bucles.md"
               - "Python/basic/5 - Funciones.md"
