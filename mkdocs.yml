@@ -9,7 +9,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight
   - toc:
-      permalink: '#'
+      permalink: "#"
   - tables
   - admonition
   - footnotes
@@ -18,6 +18,12 @@ markdown_extensions:
   - attr_list
   - sane_lists
 extra_css:
-  - 'stylesheets/extra.css'
+  - "stylesheets/extra.css"
 extra_javascript:
-  - 'javascripts/extra.js'
+  - "javascripts/extra.js"
+
+nav:
+  - Home:
+      - index.md
+  - Python:
+      - Python/
