@@ -23,7 +23,18 @@ extra_javascript:
   - "javascripts/extra.js"
 
 nav:
-  - Home:
-      - /index.md
-  - Python:
-      - /Python/
+  - Home: index.md
+  - Learning:
+      - Python:
+          - Básico:
+              - "Python/básico/1 - Fundamentos del lenguaje.md"
+              - "Python/básico/2 - Operadores.md"
+              - "Python/básico/3 - Estructuras Condicionales.md"
+              - "Python/básico/4 - Bucles.md"
+              - "Python/básico/5 - Funciones.md"
+              - "Python/básico/6 - Ambito de variables.md"
+      - Terraform:
+          - Básico:
+              - "Terraform/01 - Introduction.md"
+              - "Terraform/02 - Configurations.md"
+              - "Terraform/03 - Infrastructure.md"
