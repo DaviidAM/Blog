@@ -27,12 +27,14 @@ nav:
   - Learning:
       - Python:
           - Básico:
-              - "Python/basic/1 - Fundamentos del lenguaje.md"
-              - "Python/basic/2 - Operadores.md"
+              - Python/basic/1 - Fundamentos del lenguaje.md
+              - Python/basic/2 - Operadores.md
               - "Python/basic/3 - Estructuras Condicionales.md"
               - "Python/basic/4 - Bucles.md"
               - "Python/basic/5 - Funciones.md"
               - "Python/basic/6 - Ambito de variables.md"
+          - Pydantic:
+              - "Python/pydantic/1 - modelos.md"
       - Terraform:
           - Básico:
               - "Terraform/basic/01 - Introduction.md"
