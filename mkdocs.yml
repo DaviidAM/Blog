@@ -5,9 +5,19 @@ theme:
   name: material
 
 markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
-  - footnotes
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.highlight
   - toc:
-      permalink: true
+      permalink: '#'
+  - tables
+  - admonition
+  - footnotes
+  - meta
+  - def_list
+  - attr_list
+  - sane_lists
+extra_css:
+  - 'stylesheets/extra.css'
+extra_javascript:
+  - 'javascripts/extra.js'
