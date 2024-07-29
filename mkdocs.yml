@@ -1,4 +1,13 @@
 site_name: DaviidAM Blog
 site_url: https://daviidam.github.io/Blog
+
 theme:
   name: material
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - toc:
+      permalink: true
