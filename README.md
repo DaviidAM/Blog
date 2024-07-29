@@ -16,9 +16,9 @@ In this repository, you'll find a range of topics that I have studied and docume
 
 ## Technologies Used
 
-- Markdown: For writing and formatting notes.
-- MkDocs: For generating the static site.
-- GitHub Pages: For hosting the website.
+- **Markdown**: For writing and formatting notes.
+- **MkDocs**: For generating the static site.
+- **GitHub Pages**: For hosting the website.
 
 ## License
 
