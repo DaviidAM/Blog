@@ -20,6 +20,13 @@ In this repository, you'll find a range of topics that I have studied and docume
 - **MkDocs**: For generating the static site.
 - **GitHub Pages**: For hosting the website.
 
+## Launch server locally
+
+```bash
+source .env/bin/activate
+mkdocs build && mkdocs serve    
+````
+
 ## License
 
 Distributed under the MIT License. See LICENSE for more information.

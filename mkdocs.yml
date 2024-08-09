@@ -3,6 +3,29 @@ site_url: https://daviidam.github.io/Blog
 
 theme:
   name: material
+  features:
+    #- navigation.tabs
+    #- navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
 
 markdown_extensions:
   - codehilite
@@ -23,8 +46,8 @@ extra_javascript:
   - "javascripts/extra.js"
 
 nav:
-  - Home: index.md
-  - Learning:
+  - 🏠 Home: index.md
+  - 📚 Learning:
       - Python:
           - Básico:
               - "Python/basic/01 - Fundamentos del lenguaje.md"
@@ -35,8 +58,13 @@ nav:
               - "Python/basic/06 - Ambito de variables.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
+      - Kafka:
+          - Resumen: "Kafka/01 - Overview.md"
+          - Ejemplos con Python: "Kafka/python_kafka_examples.md"
       - Terraform:
           - Básico:
               - "Terraform/basic/01 - Introduction.md"
               - "Terraform/basic/02 - Configurations.md"
               - "Terraform/basic/03 - Infrastructure.md"
+  - ✍️ Notas:
+      - Mejorar apariencia de la terminal: "notes/beautiful_terminal.md"

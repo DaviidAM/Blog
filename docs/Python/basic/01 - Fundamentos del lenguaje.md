@@ -4,7 +4,7 @@ Python tiene varios tipos de datos básicos, incluyendo enteros, flotantes, cade
 
 ## ➡️ Enteros (int): Números sin decimales
 
-```python
+``` py title="integer.py"
 numero_entero = 10
 print(numero_entero)  # Imprime: 10
 ```
