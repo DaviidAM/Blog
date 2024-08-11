@@ -1,6 +1,9 @@
 # Arrays
 
-En Python, un array en la librería NumPy es una estructura de datos fundamental para trabajar con conjuntos de números. Imagina una lista muy organizada y eficiente, diseñada específicamente para realizar cálculos numéricos de manera rápida.
+## Conceptos básicos sobre Arrays
+
+Un array en la librería NumPy es una estructura de datos fundamental para trabajar con conjuntos de números. Imagina una lista muy organizada y eficiente, diseñada específicamente para realizar cálculos numéricos de manera rápida.
+
 
 Se pueden crear NumPy arrays directamente desde una lista de Python.
 
