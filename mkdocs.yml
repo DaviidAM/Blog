@@ -56,12 +56,15 @@ nav:
               - "Python/basic/04 - Bucles.md"
               - "Python/basic/05 - Funciones.md"
               - "Python/basic/06 - Ambito de variables.md"
-          - Pydantic:
-              - "Python/pydantic/01 - modelos.md"
           - NumPy:
               - Básico: "Python/NumPy/01 - basic.md"
               - "Python/NumPy/02 - arrays.md"
               - "Python/NumPy/03 - index.md"
+              - "Python/NumPy/04 - operations.md"
+          - Pandas:
+              - Básico: "Python/Pandas/01 - basic.md"
+          - Pydantic:
+              - "Python/pydantic/01 - modelos.md"
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
