@@ -59,7 +59,7 @@ nav:
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
           - NumPy:
-              - "Python/NumPy/01 - basic.md"
+              - Básico: "Python/NumPy/01 - basic.md"
               - "Python/NumPy/02 - arrays.md"
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"

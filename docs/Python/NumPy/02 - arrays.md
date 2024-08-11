@@ -34,7 +34,7 @@ np.arange(0,12,3)
 # array([0, 3, 6, 9])
 ```
 
-## Zeros y Unos
+## Ceros y Unos
 
 Para tema de machine learning es muy importante poder generar un array o matriz de ceros o unos, por lo que NumPy ofrece directamente un método para ello.
 
