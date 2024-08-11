@@ -61,6 +61,7 @@ nav:
           - NumPy:
               - Básico: "Python/NumPy/01 - basic.md"
               - "Python/NumPy/02 - arrays.md"
+              - "Python/NumPy/03 - index.md"
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
