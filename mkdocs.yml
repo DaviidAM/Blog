@@ -58,6 +58,9 @@ nav:
               - "Python/basic/06 - Ambito de variables.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
+          - NumPy:
+              - "Python/NumPy/01 - basic.md"
+              - "Python/NumPy/02 - arrays.md"
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
