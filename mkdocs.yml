@@ -63,6 +63,8 @@ nav:
               - "Python/NumPy/04 - operations.md"
           - Pandas:
               - Básico: "Python/Pandas/01 - basic.md"
+              - Básico: "Python/Pandas/02 - series.md"
+              - Básico: "Python/Pandas/03 - dataframes.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - Kafka:
