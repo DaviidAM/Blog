@@ -85,7 +85,7 @@ E	 30	 49	-48	-99  -18
 '''
 ```
 
-## Borrar columna
+### Borrar columna
 ```py
 df
 '''
@@ -130,9 +130,9 @@ E	 30	 49	-48	-99
 '''
 ```
 
-## Coger fila
+### Coger fila
 
-### Usando nombre
+#### Usando nombre
 ```py
 df
 '''
@@ -161,7 +161,7 @@ C	  2	 21	-26	-13
 '''
 ```
 
-### Usando índice
+#### Usando índice
 ```py
 df
 '''
@@ -190,7 +190,7 @@ B	  6	-29	 88	-80
 '''
 ```
 
-## Borrar fila
+### Borrar fila
 
 ```py
 df
@@ -225,7 +225,7 @@ E	 30	 49	-48	-99
 '''
 ```
 
-## Seleccionar subconjunto
+### Seleccionar subconjunto
 
 ```py
 df
