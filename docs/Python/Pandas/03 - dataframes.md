@@ -517,3 +517,97 @@ df.fillna(df.mean()) # Modificar celdas sin definir por la media de cada columna
 3 4.000000 8.0     40
 '''
 ```
+
+## Agrupar valores
+
+Podemos encontrarnos con tablas que tengan valores en común, por ejemplo una tabla con información de alumnos, con una columna que especifique el año de nacimiento, y queremos agrupar los alumnos por el año de nacimiento. Usando agrupaciones podemos sacar datos de grupos de alumnos que tengan el mismo año de nacimiento.
+
+```py
+df
+'''
+    Col1    Col2
+0   A       4
+1   B       3
+2   A       6
+3   C       2       
+4   C       1
+'''
+
+df.groupby('Col1').sum() # Sumar valores agrupados por Col1
+'''
+     Col2
+Col1 
+A     10
+B     3
+C     3
+'''
+```
+
+También se pueden crear grupos usando más de una key.
+
+```py
+df.groupby(['Year','Country']).mean()
+```
+
+### Funciones de agregación
+
+<table><td><tt
+><span
+>count</span></tt></td><td>Number of non-null observations</td></tr><tr
+><td><tt
+><span
+>sum</span></tt></td><td>Sum of values</td></tr><tr
+><td><tt
+><span
+>mean</span></tt></td><td>Mean of values</td></tr><tr
+><td><tt
+><span
+>mad</span></tt></td><td>Mean absolute deviation</td></tr><tr
+><td><tt
+><span
+>median</span></tt></td><td>Arithmetic median of values</td></tr><tr
+><td><tt
+><span
+>min</span></tt></td><td>Minimum</td></tr><tr
+><td><tt
+><span
+>max</span></tt></td><td>Maximum</td></tr><tr
+><td><tt
+><span
+>mode</span></tt></td><td>Mode</td></tr><tr
+><td><tt
+><span
+>abs</span></tt></td><td>Absolute Value</td></tr><tr
+><td><tt
+><span
+>prod</span></tt></td><td>Product of values</td></tr><tr
+><td><tt
+><span
+>std</span></tt></td><td>Unbiased standard deviation</td></tr><tr
+><td><tt
+><span
+>var</span></tt></td><td>Unbiased variance</td></tr><tr
+><td><tt
+><span
+>sem</span></tt></td><td>Unbiased standard error of the mean</td></tr><tr
+><td><tt
+><span
+>skew</span></tt></td><td>Unbiased skewness (3rd moment)</td></tr><tr
+><td><tt
+><span
+>kurt</span></tt></td><td>Unbiased kurtosis (4th moment)</td></tr><tr
+><td><tt
+><span
+>quantile</span></tt></td><td>Sample quantile (value at %)</td></tr><tr
+><td><tt
+><span
+>cumsum</span></tt></td><td>Cumulative sum</td></tr><tr
+><td><tt
+><span
+>cumprod</span></tt></td><td>Cumulative product</td></tr><tr
+><td><tt
+><span
+>cummax</span></tt></td><td>Cumulative maximum</td></tr><tr
+><td><tt
+><span
+>cummin</span></tt></td><td>Cumulative minimum</td></tr></tbody></table>
