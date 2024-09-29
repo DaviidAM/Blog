@@ -611,3 +611,287 @@ df.groupby(['Year','Country']).mean()
 ><td><tt
 ><span
 >cummin</span></tt></td><td>Cumulative minimum</td></tr></tbody></table>
+
+## Operaciones
+
+```py
+df_one = pd.DataFrame({'k1':['A','A','B','B','C','C'],
+                      'col1':[100,200,300,300,400,500],
+                      'col2':['NY','CA','WA','WA','AK','NV']})
+
+'''
+ k1 col1 col2
+0 A 100     NY
+1 A 200     CA
+2 B 300     WA
+3 B 300     WA
+4 C 400     AK
+5 C 500     NV
+'''
+```
+
+### Valores únicos
+
+```py
+# Devuelve valores únicos de la columna col2
+df_one['col2'].unique() 
+# array(['NY', 'CA', 'WA', 'AK', 'NV'], dtype=object)
+
+# Devuelve número valores únicos de la columna col2
+df_one['col2'].nunique()
+# 5
+
+# Devuelve tabla con cuenta de cada valor único
+df_one['col2'].value_counts()
+'''
+WA    2
+CA    1
+NV    1
+NY    1
+AK    1
+Name: col2, dtype: int64
+'''
+
+# Eliminar filas duplicadas
+df_one.drop_duplicates()
+'''
+ k1 col1 col2
+0 A 100     NY
+1 A 200     CA
+2 B 300     WA
+4 C 400     AK
+5 C 500     NV
+'''
+```
+
+### Crear nueva columna con operaciones y funciones
+
+```py
+df_one
+'''
+ k1 col1 col2
+0 A 100     NY
+1 A 200     CA
+2 B 300     WA
+3 B 300     WA
+4 C 400     AK
+5 C 500     NV
+'''
+
+# nueva columna 'New col' dependiente de 'col1'
+df_one['New Col'] = df_one['col1'] * 10
+
+df_one
+'''
+ k1 col1 col2 New Col
+0 A 100     NY     1000
+1 A 200     CA     2000
+2 B 300     WA     3000
+3 B 300     WA     3000
+4 C 400     AK     4000
+5 C 500     NV     5000
+'''
+
+# Aplicar funciones a una columna
+def grab_first_letter(state):
+    # Devuelve primera letra del valor
+    return state[0]
+
+df_one['col2'].apply(grab_first_letter)
+'''
+0    N
+1    C
+2    W
+3    W
+4    A
+5    N
+Name: col2, dtype: object
+'''
+
+df_one['first letter'] = df_one['col2'].apply(grab_first_letter)
+'''
+ k1 col1 col2 New Col     first letter
+0 A 100     NY     1000     N
+1 A 200     CA     2000     C
+2 B 300     WA     3000     W
+3 B 300     WA     3000     W
+4 C 400     AK     4000     A
+5 C 500     NV     5000     N
+'''
+```
+
+### Mapas
+
+```py
+df_one['k1']
+'''
+0    A
+1    A
+2    B
+3    B
+4    C
+5    C
+Name: k1, dtype: object
+'''
+
+df_one['k1'].map({'A':1,'B':2,'C':3})
+'''
+0    1
+1    1
+2    2
+3    2
+4    3
+5    3
+Name: k1, dtype: int64
+'''
+```
+
+### Localizar maximos y mínimos
+
+```py
+# Valor máximo de una columna
+df_one['col1'].max()
+# 500
+
+# Valor mínimo de una columna
+df_one['col1'].min()
+# 100
+
+# Índice con valor máximo de una columna
+df_one['col1'].idxmax()
+# 500
+
+# VÍndice con valor mínimo de una columna
+df_one['col1'].idxmin()
+# 100
+```
+
+### Conseguir nombres de columnas e índices
+
+```py
+# Conseguir nombres de columnas
+df_one.columns
+# Index(['k1', 'col1', 'col2', 'New Col', ... ], dtype='object')
+
+# Índices
+df_one.index
+# RangeIndex(start=0, stop=6, step=1)
+
+# Cambiar nombres de columnas
+df_one.columns = ['C1','C2','C3', 'C4']
+'''
+ C1 C2     C3     C4 
+0 A 100     NY     1000
+1 A 200     CA     2000
+2 B 300     WA     3000
+3 B 300     WA     3000
+4 C 400     AK     4000
+5 C 500     NV     500
+'''
+```
+
+### Ordenar tabla con valores de una columna
+
+```py
+df_one
+'''
+    C1  C2     C3     C4 
+0   A   100     NY     1000
+1   A   200     CA     2000
+2   B   300     WA     3000
+3   B   300     WA     3000
+4   C   400     AK     4000
+5   C   500     NV     500
+'''
+
+df_one.sort_values('C3')
+'''
+ C1 C2     C3     C4 
+4 C 400     AK     4000
+1 A 200     CA     2000
+5 C 500     NV     5000
+0 A 100     NY     1000
+2 B 300     WA     3000
+3 B 300     WA     3000
+'''
+```
+
+### Concatenar tablas
+
+```py
+features = pd.DataFrame({'A':[100,200,300,400,500],
+                        'B':[12,13,14,15,16]})
+predictions = pd.DataFrame({'pred':[0,1,1,0,1]})
+
+features
+'''
+    A     B
+0 100     12
+1 200     13
+2 300     14
+3 400     15
+4 500     16
+'''
+
+predictions
+'''
+ pred
+0 0
+1 1
+2 1
+3 0
+4 1
+'''
+
+# Concatenar = Unir tablas
+pd.concat([features,predictions]) # Atención con los ejes
+'''
+ A     B     pred
+0 100.0 12.0 NaN
+1 200.0 13.0 NaN
+2 300.0 14.0 NaN
+3 400.0 15.0 NaN
+4 500.0 16.0 NaN
+0 NaN     NaN     0.0
+1 NaN     NaN     1.0
+2 NaN     NaN     1.0
+3 NaN     NaN     0.0
+4 NaN     NaN     1.0
+'''
+
+pd.concat([features,predictions],axis=1) # Atención con los ejes
+'''
+ A     B     pred
+0 100     12     0
+1 200     13     1
+2 300     14     1
+3 400     15     0
+4 500     16     1
+'''
+```
+
+### Crear variable dummy
+
+```py
+df_one['C1']
+'''
+0    A
+1    A
+2    B
+3    B
+4    C
+5    C
+Name: C1, dtype: object
+'''
+
+pd.get_dummies(df_one['C1'])
+'''
+ A B C
+0 1 0 0
+1 1 0 0
+2 0 1 0
+3 0 1 0
+4 0 0 1
+5 0 0 1
+'''
+```
