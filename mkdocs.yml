@@ -66,6 +66,8 @@ nav:
               - Series: "Python/Pandas/02 - series.md"
               - DataFrames: "Python/Pandas/03 - dataframes.md"
               - Lectura y escritura: "Python/Pandas/04 - input_output.md"
+          - Matplotlib:
+              - Básico: "Python/matplotlib/01 - basic.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - Kafka:
