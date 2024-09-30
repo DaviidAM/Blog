@@ -68,6 +68,7 @@ nav:
               - Lectura y escritura: "Python/Pandas/04 - input_output.md"
           - Matplotlib:
               - Básico: "Python/matplotlib/01 - basic.md"
+              - Seaborn: "Python/matplotlib/02 - seaborn.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - Kafka:

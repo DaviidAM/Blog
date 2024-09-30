@@ -44,7 +44,7 @@ Mostrando esta gráfica por defecto no se muestra demasiado bien. Debido a que l
 plt.plot(housing['rooms'],housing['price'])
 ```
 
-![alt text](img/image.png)
+![alt text](img/01/image.png)
 
 Por ello, podemos elegir otro typo de gráfica donde los valores se vean más claros.
 
@@ -52,7 +52,7 @@ Por ello, podemos elegir otro typo de gráfica donde los valores se vean más cl
 plt.scatter(housing['rooms'],housing['price'])
 ```
 
-![alt text](img/image-1.png)
+![alt text](img/01/image-1.png)
 
 ## Añadir estilo
 
@@ -79,4 +79,4 @@ plt.ylabel('Y Label')
 plt.show();
 ```
 
-![alt text](img/image-2.png)
+![alt text](img/01/image-2.png)
