@@ -14,3 +14,18 @@ h3 {
     color: DodgerBlue;
     /* Change this to your desired color for Header 3 */
 }
+
+table {
+    font-size: 14px;
+    /* General table text size */
+}
+
+table th {
+    font-size: 16px;
+    /* Header text size */
+}
+
+table td {
+    font-size: 14px;
+    /* Cell text size */
+}
