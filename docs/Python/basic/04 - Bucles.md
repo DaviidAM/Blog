@@ -2,14 +2,14 @@
 
 Los bucles permiten repetir un bloque de código varias veces.
 
-## ➡️ Bucle for
+## Bucle for
 
 ```python
 for i in range(5):  # Itera sobre una secuencia de números del 0 al 4
     print(i)
 ```
 
-## ➡️ Bucle while
+## Bucle while
 
 ```python
 contador = 0
@@ -18,7 +18,7 @@ while contador < 5:
     contador += 1
 ```
 
-## ➡️ Control de bucles
+## Control de bucles
 
 Estos comandos permiten modificar el flujo de los bucles.
 

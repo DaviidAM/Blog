@@ -2,7 +2,7 @@ site_name: DaviidAM Blog
 site_url: https://daviidam.github.io/Blog
 
 theme:
-  name: material
+  name: material # material or dracula
   features:
     #- navigation.tabs
     #- navigation.sections
@@ -41,9 +41,10 @@ markdown_extensions:
   - attr_list
   - sane_lists
 extra_css:
-  - "stylesheets/extra.css"
-extra_javascript:
-  - "javascripts/extra.js"
+  #- "stylesheets/extra.css"
+  - style.css
+#extra_javascript:
+#- "javascripts/extra.js"
 
 nav:
   - 🏠 Home: index.md
@@ -74,6 +75,9 @@ nav:
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
+      - AWS Services:
+          - SAA Exam: "AWS/00 - SAA_exam.md"
+          - Cloud Computing: "AWS/01 - cloud_computing.md"
       - Terraform:
           - Básico:
               - "Terraform/basic/01 - Introduction.md"

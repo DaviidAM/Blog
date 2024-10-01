@@ -2,7 +2,7 @@
 
 Los operadores se usan para realizar operaciones con valores.
 
-## ➡️ Operadores Aritméticos
+## Operadores Aritméticos
 
 ```python
 a = 5
@@ -18,7 +18,7 @@ potencia = a ** b     # Exponente: 25
 print(suma, resta, multiplicacion, division, modulo, potencia)
 ```
 
-## ➡️ Operadores Comparativos
+## Operadores Comparativos
 
 ```python
 
@@ -35,7 +35,7 @@ menor_o_igual = x <= y # Menor o igual: True
 print(igual, diferente, mayor, menor, mayor_o_igual, menor_o_igual)
 ```
 
-## ➡️ Operadores Lógicos
+## Operadores Lógicos
 
 ```python
 a = True
