@@ -1,0 +1,16 @@
+h1 {
+    color: purple !important;
+    font-weight: bold !important;
+    /* Change this to your desired color for Header 1 */
+}
+
+h2 {
+    color: green;
+    font-weight: bold !important;
+    /* Change this to your desired color for Header 2 */
+}
+
+h3 {
+    color: DodgerBlue;
+    /* Change this to your desired color for Header 3 */
+}
