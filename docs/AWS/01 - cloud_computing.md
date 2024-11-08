@@ -97,6 +97,93 @@ Many reasons for using the cloud. For example, If you are a startup, you can jus
 
 ## AWS Security and Compliance
 
+AWS follows the model of **shared security**, which means AWS is responsible for the secu- rity of the cloud, and customers are responsible for the security in the cloud.
+
+In the case of a managed service (for example, Amazon RDS, Amazon Redshift, Amazon DynamoDB, and so on), AWS is also responsible for the security configuration of it.
+
+![AWS shared security model](img/aws_shared_security_model.png)
+
 ## AWS Products and Services
 
+Now, AWS has more than 175 services that include compute, storage, networking, database, analytics, application services, deployment, management, and mobile services.
+
 ### Compute
+
+The compute services include both servers and serverless configuration.
+
+| **Services** | Description |
+| -- | -- |
+| **Amazon Elastic Compute Cloud (EC2)** | It includes the virtual servers, called *instances*, in the cloud. Depending on the use case, the customer can choose from a variety of instance types. |
+| **Amazon EC2 Auto Scaling** | It helps in automatically scaling the Amazon EC2 instances up and down as per the policies you define, it ensures that you are always running with the desired number of instances. No additional charge for using Amazon EC2 Auto Scaling. Amazon EC2 Auto Scaling integrates with Elastic Load Balancer|
+| **AWS Lambda** | AWS Lambda enables you to run code without provisioning or managing any servers or infrastructure. You simply develop code for your application or back-end service and define the event triggers with the AWS Lambda service. AWS Lambda then takes care of provisioning the resources to run your code, produce the results, and tear down the code. You pay only for the compute time when the code is getting executed; there is no charge when the code is not running. |
+| **Amazon EC2 Container Service (ECS)** | It allows you to run Docker containers on Amazon EC2 instances. There are no separate charges for Amazon ECS; you pay only for the AWS resources used. |
+| **Amazon Elastic Kubernetes Service (EKS)** | It is a fully managed Kubernetes service that makes it easy for you to run your code on AWS without needing to install and operate your own Kubernetes control plane or worker nodes. |
+| **AWS Fargate** | It is a serverless compute engine for containers that works with both Amazon ECS and Amazon EKS. It utomatically scale, load balance, and manage scheduling of your containers for availability. |
+| **AWS Elastic Beanstalk** | It lets you run and manage web applications without worrying about the underlying infrastructure. There is no addi- tional charge for AWS Elastic Beanstalk; you pay only for the AWS resources needed to run your applications. |
+| **Amazon Lightsail** | It  is the simplest way to get started with AWS for small businesses, devel- opers, students, and other users who need a simple virtual private server (VPS) solution. Amazon Lightsail provides storage, networking capacity, and compute capabilities to manage and deploy web sites and web applications in the cloud. It includes a virtualized compute server, DNS management, SSD-based storage, data transfer capa- bilities, and a static IP address for a low, predictable monthly price. |
+| **AWS Batch** | It enables users to efficiently run hundreds of thousands of batch comput- ing jobs on AWS. IT dynamically provisions the optimal type and quantity of compute resources |
+| **AWS Outposts** | It helps in extending AWS services to any data center. Using Outposts, you can run all the AWS services, APIs, and tools at your data center, at a partner data cen- ter, or at a colocation facility. It is an ideal platform to provide a hybrid experience. Outposts is the on-premise version of the AWS cloud. |
+
+### Networking
+
+Networking is part of the AWS core services. AWS networking helps you to isolate your cloud infrastructure.
+
+| **Services** | Description |
+| -- | -- |
+| **Amazon Virtual Private Cloud (VPC)** | Using this service, you can isolate cloud resources within your own private virtual network. You can say that an Amazon VPC is your own data center in the cloud. You have complete control over the networking in an Amazon VPC. You can bring your own IP addresses, you can define the subnets as you want, and you have full control over the route table and network gateways. |
+| **Amazon Route 53** | It is a Domain Name System (DNS) web service. It is highly available and scalable, and its SLA is 100 percent uptime. Amazon Route 53 is IPv4 as well as IPv6 compliant |
+| **Elastic Load Balancing** | It allows you to automatically distribute the load across multiple Amazon EC2 instances. It can be integrated with Auto Scaling; as a result, you can auto- matically scale up and down your Amazon EC2 instance and dynamically grow and shrink your operation depending on the traffic. |
+| **AWS Direct Connect** | Using this service, you can establish private, dedicated network connectivity from your data center to AWS. You can reduce bandwidth costs for high-volume data transfers and get consistent network performance.|
+| **AWS App Mesh** | It helps monitor, control, debug, and trace communications between services. It's based on the open source Envoy service. |
+| **AWS Global Accelerator** | It improves the availability and performance of your applications for global users. It provides a set of static IP addresses that are anycast from the AWS edge network, which provides a fixed entry point to your applications and eliminates the com- plexity of managing specific IP addresses for different AWS regions and AZs. |
+
+### Security and Compliance
+
+The security of the cloud is the highest priority for AWS.
+
+| **Services** | Description |
+| -- | -- |
+| **AWS Identity and Access Management (IAM)** | It is used to create users, groups, and roles. It is also used to manage and control access to AWS services and resources. |
+| **Amazon Inspector** | It is an automated security assessment service that helps you to identify the security vulnerabilities in your application when it is being deployed as well as when it is running in a production system. |
+| **AWS Certificate Manager (ACM)** | It is used to manage Secure Sockets Layer (SSL) certifi- cates for use with AWS services. Using ACM, you can provision, manage, and deploy SSL/Transport Layer Security (TLS) certificates. |
+| **AWS Directory Service** | It is an AWS managed directory service built on Microsoft Active Directory. It can be used to manage directories in the cloud. |
+| **AWS Web Application Firewall (WAF)** | It is a web application firewall that detects mali- cious traffic targeted at the web applications. Using WAF, you can create various rules with which you can protect against common attacks such as SQL injection and scripting.  |
+| **AWS Shield** | It is a managed service that protects against distributed denial-of-service (DDoS) attacks targeted at the web applications. There are two tiers of AWS Shield: Standard and Advanced. AWS Shield Standard is free and protects against most com- monly occurring DDoS attacks against web applications. With AWS Shield Advanced, you get higher levels of protection targeting not only against web applications but also Elastic Load Balancer, Amazon CloudFront, and Amazon Route 53. |
+| **Amazon GuardDuty** | It is a threat-detection service that continuously monitors your AWS accounts and workloads to protect them. It provides broad protection of your AWS accounts, workloads, and data by helping to identify threats such as attacker reconnais- sance, instance compromise, and account compromise. |
+| **Amazon Macie** | It helps you protect your data in Amazon S3 by helping you classify what data you have, the business value of that data, and the behavior associated with access to that data. It uses machine learning. |
+| **AWS Secrets Manager** | It is a secrets management service that helps you protect access to your applications, services, and IT resources. |
+| **AWS SSO** | AWS Single Sign-On (SSO) is an AWS service that enables you to use your existing cre- dentials from Microsoft Active Directory to access your cloud-based applications, such as AWS accounts and business applications (Office 365, Salesforce, Box), by using SSO. |
+| **AWS CloudHSM** | It provides you with a dedicated hardware security module (HSM) in the AWS cloud. It helps you to meet all the contractual and regulatory com- pliance requirements. The HSM is a tamper-resistant hardware, which provides secure key storage and cryptographic operations. |
+| **AWS KMS** | IT  is a managed service that helps you create and control the keys used for cryptographic operations. AWS KMS presents a single control point from which to manage keys and define policies consistently across integrated AWS services and your own applications. |
+
+### Storage and Content Delivery
+
+| **Services** | Description |
+| -- | -- |
+| **Amazon Simple Shared Storage (S3)** | It was one of the first services launched by AWS in 2006. It is the storage for the Internet, which is also used as an object store. Amazon S3 lets you store and retrieve any amount of data, at any time, from anywhere on the Web. |
+| **Amazon Glacier** | Low-cost cloud storage that is mainly used for data archiving and long-term backup purposes. |
+| **Amazon Elastic Block Storage (EBS)** | It provides persistent block storage for EC2 instances. You can choose from either magnetic or solid-state drive (SSD) disks for Amazon EBS volumes. |
+| **Amazon Elastic File System (EFS)** | It is a fully managed service that provides easy, scalable, shared file storage with Amazon EC2 instances in the AWS cloud. It provides a simple file system interface and can be accessed concurrently for up to thousands of Amazon EC2 instances. |
+| **AWS Storage Gateway** | It is a service that helps to seamlessly integrate on-premise storage with AWS cloud storage. It is delivered as a virtual machine installed in an on-premise data center. You can connect it as a file server, or you can connect it as a local disk. You can also connect it as a virtual tape library. |
+| **Import/Export Options** | It  is a service that helps to transfer a large amount of data into AWS using a physical storage appliance. By doing that, you can bypass the data transfer over the Internet. You can also use **AWS Snowball** in which case AWS ships a physical device to your premises. |
+| **Amazon CloudFront** | It is the global content delivery network (CDN) service of AWS. Amazon CloudFront helps to accelerate the delivery of the static content of your web sites, including photos, videos, or any other web assets. |
+
+### Database
+
+| **Services** | Description |
+| -- | -- |
+| **Amazon Relational Database Service (RDS)** | |
+| **Amazon DynamoDB** | |
+| **Amazon Redshift** | |
+| **Amazon ElastiCache** | |
+| **Amazon Aurora** | |
+| **Amazon Neptune** | |
+| **Amazon QLDB** | |
+| **Amazon DocumentDB** | |
+| **Amazon Keyspaces** | |
+
+### Analytics
+
+| **Services** | Description |
+| -- | -- |
+| **a** | |
