@@ -24,16 +24,16 @@ blockquote {
 }
 
 table {
-    font-size: 14px;
+    font-size: 16px;
     /* General table text size */
 }
 
 table th {
-    font-size: 16px;
+    font-size: 18px;
     /* Header text size */
 }
 
 table td {
-    font-size: 14px;
+    font-size: 16px;
     /* Cell text size */
 }
