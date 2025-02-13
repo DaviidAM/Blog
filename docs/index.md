@@ -10,3 +10,20 @@ Hola y gracias por visitar mi rincón digital. Soy David, un apasionado de de la
 * **Tutoriales y Guías**: ¿Quieres aprender algo nuevo? Aquí encontrarás tutoriales paso a paso y guías prácticas para ayudarte a adquirir nuevas habilidades y conocimientos.
 * **Reflexiones Personales**: A veces, me gusta compartir mis reflexiones sobre lo que estoy aprendiendo y cómo esos conocimientos impactan mi vida diaria.
 * **Recursos Recomendados**: Libros, cursos, herramientas y otros recursos que considero valiosos y que podrían ser de interés para ti también.
+
+## Recursos
+
+### WIP
+
+* AWS SAA
+* Terraform
+* Python / Pandas
+* Python / ML & AI
+
+### ToDo
+
+* MySQL
+* MongoDB
+* Docker
+* Kubernetes
+* API
