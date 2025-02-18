@@ -14,8 +14,6 @@ multiplicacion = a * b  # Multiplicación: 10
 division = a / b      # División: 2.5
 modulo = a % b        # Módulo: 1
 potencia = a ** b     # Exponente: 25
-
-print(suma, resta, multiplicacion, division, modulo, potencia)
 ```
 
 ## Operadores Comparativos
@@ -31,8 +29,6 @@ mayor = x > y          # Mayor: False
 menor = x < y          # Menor: True
 mayor_o_igual = x >= y # Mayor o igual: False
 menor_o_igual = x <= y # Menor o igual: True
-
-print(igual, diferente, mayor, menor, mayor_o_igual, menor_o_igual)
 ```
 
 ## Operadores Lógicos
@@ -44,6 +40,4 @@ b = False
 and_op = a and b      # and: False
 or_op = a or b        # or: True
 not_op = not a        # not: False
-
-print(and_op, or_op, not_op)
 ```
