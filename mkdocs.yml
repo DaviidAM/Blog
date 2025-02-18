@@ -17,13 +17,13 @@ theme:
     - scheme: slate
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
+        name: Switch to light mode
       primary: teal
       accent: purple
     - scheme: default
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
+        name: Switch to dark mode
       primary: teal
       accent: lime
 
