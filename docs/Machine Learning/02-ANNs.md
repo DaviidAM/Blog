@@ -20,11 +20,13 @@ x2 -- w2+b --> fx
 fx --> y
 ```
 
-> w: weight \
+>w: weight <br>
 b: bias
 
->$\hat{y} = \sum_{i=1}^{n} x_iw_i + b_i$ \
-and if B = b1+b2+...+bn \
+$\hat{y} = \sum_{i=1}^{n} x_iw_i + b_i$
+
+y si añadimos que $B = b1+b2+...+bn$
+
 $\hat{y} = B + \sum_{i=1}^{n} x_iw_i$
 
 ## Redes neuronales (Neural networks)
@@ -103,7 +105,7 @@ Se considera que una red es una redes neuronal profunda (`deep neural networks`)
 
 Estas funciones se usan para limitar la salida de cada neurona.
 
-> $Z = W*x + b$
+$Z = W*x + b$
 
 | Activation function | Traducción al español | Descripción |
 | --- | --- | --- |
@@ -133,18 +135,18 @@ Una de las funciones de coste más comunes es la función de coste cuadrática.
 
 $C = \dfrac{1}{2n}\sum_{x} abs(y(x)-a^L(x))^2$
 
->y(x): Valores reales \
-a(x): Valores de predicciones \
-L: suele ser la última capa. \
+>y(x): Valores reales <br>
+a(x): Valores de predicciones <br>
+L: suele ser la última capa. <br>
 $a^L(x): $ Salida de la función de activación de la capa L.
 
 Se puede pensar en la función de coste, como una funcón que depende de 4 elementos principalmante.
 
 $C(W,B, S^r, E^r)$
 
-> W: Pesos de la red. \
-B: Todos los bias de la red \
-$S^r$: Entrada de una muestra de entrenamiento. \
+>$W$: Pesos de la red. <br>
+$B$: Todos los bias de la red <br>
+$S^r$: Entrada de una muestra de entrenamiento. <br>
 $E^r$: Salida deseada de esa muestra de entrenamiento.
 
 Lo normal sería utilizar la combinación de elementos que genera el error más bajo, pero calcular esto es muy complejo.
@@ -169,37 +171,38 @@ Se comienza desde la última capa `L` hacia la izquierda, `L-1`, `L-2`, ... `L-n
 
 Enfocandonos en las últimas dos capas (`L` y `L-1`).
 
->$z = wx+b$
+$z = wx+b$
 
 y la función de activación
 
->$a = \sigma(Z)$
+$a = \sigma(Z)$
 
 Significa que tenemos
 
->$z^L = w^La^{L-1}+b^L$ \
-\
-$z^L$: Salida de la capa L \
-$w^L$: Pesos de la capa L \
-$a^{L-1}$: Función de activación de la capa anterior = Salida de la capa anterior \
+$z^L = w^La^{L-1}+b^L$
+
+>$z^L$: Salida de la capa L <br>
+$w^L$: Pesos de la capa L <br>
+$a^{L-1}$: Función de activación de la capa anterior = Salida de la capa anterior <br>
 $b^L$: Bias/Sesgos de la capa L
 
 Si contamos todas las capas.
 
->$a^L = \sigma(Z^L)$
+$a^L = \sigma(Z^L)$
 
 La función de coste quedaría:
 
->$C_0(...) = (a^L-y)^2$ \
-$y$: Salida real
+$C_0(...) = (a^L-y)^2$
+
+>$y$: Salida real
 
 La idea de retroproagación es ir calculando el error en cada capa y usando el gradiente/derivada intentar minimizar dicho error. En un lenguaje más cotidiano, calcular con las derivadas parciales como se ve afectada la función de coste cuando se modifica uno de los parámetros de las neuronas.
 
-> $\frac{\delta C}{\delta w}$
+$\frac{\delta C}{\delta w}$
 
 Cuando nos referimos sólo a la última capa:
 
-> $\frac{\delta C}{\delta w^L}  = \frac{\delta C}{\delta a^L} \frac{\delta a^L}{\delta z^L} \frac{\delta z^L}{\delta w^L}  $
+$\frac{\delta C}{\delta w^L} =\frac{\delta C}{\delta a^L}\frac{\delta a^L}{\delta z^L}\frac{\delta z^L}{\delta w^L}$
 
 [Link explicando las funciones matemáticas (en inglés)](http://neuralnetworksanddeeplearning.com/chap2.html)
 
