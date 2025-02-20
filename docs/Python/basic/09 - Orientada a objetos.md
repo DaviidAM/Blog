@@ -1,6 +1,6 @@
 # Programación orientada a objetos
 
-La Programación Orientada a Objetos (POO) - en inglés "Object-Oriented Programming (OOP)" - es un paradigma de programación que utiliza "objetos" y sus interacciones para diseñar aplicaciones y programas. Python es un lenguaje que soporta POO, lo que permite crear programas más estructurados y reutilizables.
+La Programación Orientada a Objetos (POO) - en inglés "Object-Oriented Programming (OOP)" - es un paradigma de programación que utiliza "objetos" y sus interacciones para diseñar aplicaciones y programas. Python es un lenguaje que soporta POO, lo que permite crear programas más estructurados y reutilizables. Esto permite crear programas más organizados y fáciles de mantener.
 
 ## Clases y Objetos
 
