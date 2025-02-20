@@ -69,6 +69,7 @@ nav:
               - "Python/basic/06 - Ambito de variables.md"
               - "Python/basic/07 - Conjuntos de datos.md"
               - "Python/basic/08 - Excepciones.md"
+              - "Python/basic/09 - Orientada a objetos.md"
           - NumPy:
               - Básico: "Python/NumPy/01 - basic.md"
               - "Python/NumPy/02 - arrays.md"
