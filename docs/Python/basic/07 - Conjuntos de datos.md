@@ -80,6 +80,12 @@ print("Después de reverse:", frutas)
 copia_frutas = frutas.copy()
 print("Copia de la lista:", copia_frutas)  
 # Salida: ['banana', 'cereza', 'banana', 'manzana']
+
+# Coger sólo un subconjunto de valores de la lista
+L = range(10) # [0, 1, 2, ... , 9]
+print(L[1:-1]) # [1, 2, ... , 8]
+print(L[::2]) # [0, 2, 4, 6, 8]
+print(L[::-1]) # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 ```
 
 ## Tupla
