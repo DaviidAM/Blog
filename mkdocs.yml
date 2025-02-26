@@ -70,6 +70,7 @@ nav:
               - "Python/basic/07 - Conjuntos de datos.md"
               - "Python/basic/08 - Excepciones.md"
               - "Python/basic/09 - Orientada a objetos.md"
+              - "Python/basic/12 - Algoritmos.md"
           - NumPy:
               - Básico: "Python/NumPy/01 - basic.md"
               - "Python/NumPy/02 - arrays.md"
