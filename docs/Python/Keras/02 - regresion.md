@@ -20,13 +20,18 @@ df.describe().transpose()
 # Gráfica para ver el conteo del número de habitaciones
 sns.countplot(x='bedrooms', data=df)
 
+# Es bueno limpiar y ordenas los datos como mejor veamos conveniente.
+df = df.drop('id', axis=1) # Hay columnas como el id que posiblemente no nos sirva, por lo que podemos eliminarlas.
+df['date'] = pd.to_datetime(df['date']) # Para las fechas es importante pasarlo a un formato entendible por la red.
+# Crear nuevas columnas con valores extraídos de la fecha.
+df['year'] = df['date'].apply(lambda date: date.year)
+df['month'] = df['date'].apply(lambda date: date.month)
+
 # Es importante ver cómo se correlacionan (como influyen unos valores sobre otros) dependiendo la categoría
 # Ejemplo: Precio debe tener una alta correlación con los metros cuadrados
-df = df.drop('date', axis=1) # Hay que eliminar la columna date porque si no la correlación no funciona.
 df.corr()['price'].sort_values()
 '''
 zipcode         -0.053402
-id              -0.016772
 long             0.022036
 condition        0.036056
 yr_built         0.053953
@@ -70,5 +75,87 @@ sns.scatterplot(x='long',y='lat',
                 data=non_top_1_perc,hue='price',
                 palette='RdYlGn',edgecolor=None,alpha=0.2)
 
+# Se pueden agrupar valores
+df.groupby('month').mean()['price'].plot()
+
+# Ver valores que se repiten
+df['zipcode'].value_counts()
 
 ```
+
+## Preprocesamiento
+
+Continuando el ejemplo anterior donde trabajábamos con características de casas.
+
+```python
+# Extraemos datos de entrada y salida del modelo
+X = df.drop('price', axis = 1).values
+# Usamos .values para devolver numpy array en vez de Dataframe
+y = df['price'].values
+
+from sklearn.model_selection import train_test_split
+
+# Separar entre pruebas de testeo y muestras de entrenamiento
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3,random_state=101)
+
+# Escalar datos
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+X_train= scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+```
+
+## Trabajar con el modelo
+
+Continuando el ejemplo anterior donde trabajábamos con características de casas.
+
+```python
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
+from tensorflow.keras.optimizers import Adam
+
+# Crear modelo
+
+# X_train.shape
+# Salida: (15117, 19)
+# Al tener 19 características es buena idea tener 19 neuronas por capa.
+
+
+model = Sequential()
+
+model.add(Dense(19,activation='relu'))
+model.add(Dense(19,activation='relu'))
+model.add(Dense(19,activation='relu'))
+model.add(Dense(19,activation='relu'))
+model.add(Dense(1))
+
+model.compile(optimizer='adam',loss='mse')
+
+# Entrenar modelo
+model.fit(x=X_train,y=y_train.values,
+          validation_data=(X_test,y_test.values), # "validation_data" es para saber cómo va el porcentaje de acierto con los datos de testeo.
+          batch_size=128, # Agrupar datos, normalmente se usa exponentes de 2.
+          epochs=400) # Número de iteraciones
+
+# Tabla con el histórico de las pérdidas del entrenamiento
+losses = pd.DataFrame(model.history.history)
+losses.plot()
+
+# Calcular errores
+from sklearn.metrics import mean_squared_error,mean_absolute_error,explained_variance_score
+
+predictions = model.predict(X_test)
+
+# Hay diferentes tipos de errores, dependiendo de los valores, es más útil uno u otro
+mean_absolute_error(y_test,predictions)
+np.sqrt(mean_squared_error(y_test,predictions))
+explained_variance_score(y_test,predictions)
+
+# Nuestras Predicciones
+plt.scatter(y_test,predictions)
+# Predicción perfecta
+plt.plot(y_test,y_test,'r')
+```
+
+En este ejemplo había valores muy alejados (casas muy caras), posiblemente la mejor forma para tener un mejor resultado con nuestro modelo es eliminar ese porcentaje de casas excesivamente caras y volver a entrenar el modelo.
