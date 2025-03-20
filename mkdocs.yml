@@ -85,7 +85,7 @@ nav:
               - Básico: "Python/matplotlib/01 - basic.md"
               - Seaborn: "Python/matplotlib/02 - seaborn.md"
           - Keras:
-              - Básico: "Python/Keras/01 - basic.md"
+              - Introducción: "Python/Keras/01 - intro.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - Kafka:
