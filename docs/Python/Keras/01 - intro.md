@@ -44,11 +44,15 @@ df['date'] = pd.to_datetime(df['date'])
 # Función lambda para crear nuevas columnas.
 df['year'] = df['date'].apply(lambda date: date.year)
 df['month'] = df['date'].apply(lambda date: date.month)
+
+# Otra forma para crear nuevas columnas.
+df['year'] = df['date'].dt.year
+df['month'] = df['date'].dt.month
 ```
 
 #### Correlación
 
-Podemos intentar correlacionar las columnas en relación con una columna de referencia. Ejemplo de correlación entre precio de una casa respecto características de la casa.
+Podemos correlacionar las columnas entre sí y ver como impacta un cambio en una columna con el resto de columnas. Ejemplo de correlación entre precio de una casa respecto características de la casa.
 
 ```python
 # Ejemplo: Precio tiene una alta correlación con los metros cuadrados
@@ -75,6 +79,11 @@ sqft_living      0.701917  <<<< Alta correlación
 price            1.000000  <<<< Referencia
 Name: price, dtype: float64
 '''
+
+# Mostrar correlación en un mapa de calor
+plt.figure(figsize=(12,7))
+sns.heatmap(df.corr(),annot=True,cmap='viridis')
+plt.ylim(10, 0)
 ```
 
 #### Visualizar datos
@@ -103,6 +112,11 @@ plt.figure(figsize=(12,8))
 sns.scatterplot(x='long',y='lat',
                 data=non_top_1_perc,hue='price',
                 palette='RdYlGn',edgecolor=None,alpha=0.2)
+
+# Gráfica de precio por habitaciones
+plt.figure(figsize=(12,4))
+subgrade_order = sorted(df['bedrooms'].unique())
+sns.countplot(x='price',data=df,order = subgrade_order,palette='coolwarm' )
 ```
 
 #### Agrupar valores
@@ -110,6 +124,18 @@ sns.scatterplot(x='long',y='lat',
 ```python
 # Se pueden agrupar valores
 df.groupby('month').mean()['price'].plot()
+
+# Describir características principales
+df.groupby('month')['price'].describe()
+```
+
+#### Ver valores únicos
+
+```python
+df['zipcode'].unique()
+
+# si los queremos ordenados
+sorted(df['zipcode'].unique())
 ```
 
 #### Contar valores que se repiten
