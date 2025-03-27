@@ -86,6 +86,7 @@ nav:
               - Seaborn: "Python/matplotlib/02 - seaborn.md"
           - Keras:
               - Introducción: "Python/Keras/01 - intro.md"
+              - TensorBoard: "Python/Keras/02 - tensorboard.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - Kafka:
