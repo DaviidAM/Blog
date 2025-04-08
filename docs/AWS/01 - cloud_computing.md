@@ -172,18 +172,99 @@ The security of the cloud is the highest priority for AWS.
 
 | **Services** | Description |
 | -- | -- |
-| **Amazon Relational Database Service (RDS)** | |
-| **Amazon DynamoDB** | |
-| **Amazon Redshift** | |
-| **Amazon ElastiCache** | |
-| **Amazon Aurora** | |
-| **Amazon Neptune** | |
-| **Amazon QLDB** | |
-| **Amazon DocumentDB** | |
-| **Amazon Keyspaces** | |
+| **Amazon Relational Database Service (RDS)** | Relational database. It supports both commercial and open source database engines (MySQL, Oracle, SQL Server, PostgreSQL, Maria DB and Aurora).|
+| **Amazon DynamoDB** | NoSQL database. It delivers consistent, single-digit-millisecond latency at any scale. It consists of SSD storage.|
+| **Amazon Redshift** | Fully managed petabyte-scale data warehouse service. It stores the data in columnar format, thereby providing better I/O efficiency. The data is continuously backed up in Amazon S3.|
+| **Amazon ElastiCache** | ervice that helps in deploying an in-memory cache or data store in the cloud. It supports two open source in-memory engines: Redis and Memcached.|
+| **Amazon Aurora** | It's Amazon’s relational database built for the cloud. It supports two open source RDBMS engines: MySQL and PostgreSQL. The database is constantly backed up to Amazon S3.|
+| **Amazon Neptune** | Fully managed graph database service with which you can build and run applications that work with highly connected data sets.|
+| **Amazon QLDB** | It's a purpose-built ledger database that provides a complete and crypto-graphically verifiable history of all changes made to your application data.|
+| **Amazon DocumentDB** | Fully managed document database service for MongoDB, you can use the same MongoDB application code, drivers, and tools.|
+| **Amazon Keyspaces** | Managed Apache Cassandra–compatible database service, you can run your Cassandra workloads on AWS by using the same Cassandra Query Language (CQL) code.|
 
 ### Analytics
 
 | **Services** | Description |
 | -- | -- |
+| **Amazon Athena** | Serverless, interactive query service that enables users to easily analyze data in Amazon S3 using standard SQL.|
+| **Amazon EMR** | Web service that enables users, businesses, enterprises, data analysts, researchers, and developers to easily and cost-effectively process enormous amounts of data. It utilizes a hosted Hadoop framework.|
+| **Amazon Elasticsearch Service** | Fully managed web service that makes it easy to create, operate, deploy, and scale Elasticsearch clusters in the AWS cloud.|
+| **Amazon CloudSearch** | Fully managed web service in the AWS cloud that offers a simple, cost-effective, easy-to-use way to manage and scale a search solution for your application or web site.|
+| **AWS Data Pipeline** | Enables users to process, transform, and move data between different AWS compute and storage services, as well as on-premise data sources, at specified intervals reliably and efficiently.|
+| **Amazon Kinesis** | Fully managed service that makes it easy to collect, analyze, and process real-time, streaming data.|
+| **AWS Glue** | Fully managed, extract, transform, and load (ETL) service. It can discover your data automatically and profiles the data via its built-in Glue Data Catalog. It runs ETL jobs in an Apache Spark environment and loads the data into the target. AWS Glue Data Catalog is a central metadata repository; an ETL engine that can automatically generate Scala or Python code.|
+| **Amazon MSK** | Managed service for managing Apache Kafka infrastructure and operations.|
+| **AWS Lake Formation** | It makes it easy to set up a secure data lake in days. A data lake is a central data repository with a large variety of data. It contains both structured and unstructured data. Using a data lake, you can manage the full life cycle of your data.|
+| **Amazon QuickSight** | Easy, fast, cloud-powered, fully managed business analytics service that makes it easy to build visualizations, perform ad hoc analysis, and quickly get meaningful insights from your data.|
+
+### Application Services
+
+| **Services** | Description |
+| -- | -- |
+| **Amazon API Gateway** | Fully managed service that provides developers with an easy, simple, scalable, flexible, pay-as-you-go service that handles all aspects of building, deploying, and operating robust APIs for application back-end services such as code running on AWS Lambda, applications running on Amazon EC2, or any web application.|
+| **AWS Step Functions** | Fully managed service that enables users to efficiently and securely coordinate various components of distributed applications and microservices using visual workflows. This service provides a graphical interface for users to visualize and arrange the components of their applications.|
+| **Amazon Simple Workflow Service (SWF)** | Web-based cloud service that makes it easy to coordinate work across distributed application components.|
+| **Amazon Elastic Transcoder** | Convert (or transcode) video and audio files from their source format into the output format of their choice.|
+
+### Developer Tools
+
+| **Services** | Description |
+| -- | -- |
+| **AWS CodeCommit** | Host highly scalable private Git repositories securely.|
+| **AWS CodePipeline** | Managed continuous integration and continuous delivery service for quick, reliable application and infrastructure updates.|
+| **AWS CodeBuild** | Builds and compiles source code, runs tests, and produces software packages that are ready to deploy, eliminating the need to provision, manage, and scale build servers.|
+| **AWS CodeDeploy** | Automates code deployments to any instance or servers, including Amazon EC2 instances and servers running on-premises.|
+
+### Management Tools
+
+| **Services** | Description |
+| -- | -- |
+| **AWS CloudFormation** | |
+| **AWS Service Catalog** | |
+| **AWS OpsWorks** | |
+| **Amazon CloudWatch** | |
+| **AWS Config** | |
+| **AWS CloudTrail** | |
+
+### Messaging
+
+| **Services** | Description |
+| -- | -- |
+| **Amazon Simple Notification Service (SNS)** | |
+| **Amazon Simple Email Service (SES)** | |
+| **Amazon Simple Queue Service (SQS)** | |
+
+### Migration
+
+| **Services** | Description |
+| -- | -- |
+| **a** | |
+| **a** | |
+| **a** | |
+| **a** | |
+
+### Artificial Intelligence
+
+| **Services** | Description |
+| -- | -- |
+| **a** | |
+| **a** | |
+| **a** | |
+| **a** | |
+
+### Internet of Things
+
+| **Services** | Description |
+| -- | -- |
+| **a** | |
+| **a** | |
+| **a** | |
+
+### Mobile Services
+
+| **Services** | Description |
+| -- | -- |
+| **a** | |
+| **a** | |
+| **a** | |
 | **a** | |
