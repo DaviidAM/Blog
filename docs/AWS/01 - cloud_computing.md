@@ -219,52 +219,52 @@ The security of the cloud is the highest priority for AWS.
 
 | **Services** | Description |
 | -- | -- |
-| **AWS CloudFormation** | |
-| **AWS Service Catalog** | |
-| **AWS OpsWorks** | |
-| **Amazon CloudWatch** | |
-| **AWS Config** | |
-| **AWS CloudTrail** | |
+| **AWS CloudFormation** | Automate resource provisioning using declarative templates and deploying resource stacks. It gives developers and systems administrators an easy way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.|
+| **AWS Service Catalog** | Create, manage, and distribute catalogs of approved products to end users, who can then access the products they need in a personalized portal. Administrators can control which users have access to each product to enforce compliance with organizational business policies. Administrators can also set up adopted roles so that end users only require IAM access to AWS Service Catalog to deploy approved resources.|
+| **AWS OpsWorks** | Give you workflow automation for continuous deployment, automated testing for compliance and security, and a user interface that gives you visibility into your nodes and their status. The Chef server gives you full stack automation by handling operational tasks such as software and operating system configurations, package installations, database setups, and more.|
+| **Amazon CloudWatch** | Monitoring service for AWS cloud resources and the applications you run on AWS. You can use Amazon CloudWatch to collect and track metrics, collect and monitor log files, and set alarms.|
+| **AWS Config** | Provides you with an AWS resource inventory, configuration history, and configuration change notifications to enable security and governance.|
+| **AWS CloudTrail** | Records AWS API calls and user activity in your account and delivers log files to you via Amazon S3.|
 
 ### Messaging
 
 | **Services** | Description |
 | -- | -- |
-| **Amazon Simple Notification Service (SNS)** | |
-| **Amazon Simple Email Service (SES)** | |
-| **Amazon Simple Queue Service (SQS)** | |
+| **Amazon Simple Notification Service (SNS)** | Highly scalable, flexible, and cost-effective web service that makes it easy to configure, operate, and send notifications from the cloud. Publish messages from an application and immediately deliver them to subscribers or other applications.|
+| **Amazon Simple Email Service (SES)** | Send and receive e-mail using your own e-mail addresses and domains.|
+| **Amazon Simple Queue Service (SQS)** | Managed web service that gives you access to message queues to store messages waiting to be processed. Build message queuing applications that can run on any computer.|
 
 ### Migration
 
 | **Services** | Description |
 | -- | -- |
-| **a** | |
-| **a** | |
-| **a** | |
-| **a** | |
+| **AWS Application Discovery Service** | Migrate projects by automatically identifying applications running in on-premise data centers and mapping their associated dependencies and their performance profiles.|
+| **AWS Database Migration Service** | Migrate databases to AWS reliably and securely. The source database remains fully operational during the migration, minimizing downtime.|
+| **AWS Snowball** | Transport a petabyte-scale amount of data into and out of the AWS cloud.|
+| **AWS Server Migration Service (SMS)** | It helps coordinate, automate, schedule, and track large-scale server migrations. Migrate thousands of on-premise workloads to AWS.|
 
 ### Artificial Intelligence
 
 | **Services** | Description |
 | -- | -- |
-| **a** | |
-| **a** | |
-| **a** | |
-| **a** | |
+| **Amazon Lex** | Conversational chatbot interfaces using voice and text. Language-understanding capabilities and speech recognition.|
+| **Amazon Polly** | Converts text into lifelike speech.|
+| **Amazon Rekognition** | Image recognition.|
+| **Amazon SageMaker** | Enables you to build, train, and deploy machine learning models very quickly. It provides managed instances of TensorFlow and Apache MXNet, where users can create their own machine learning algorithms.|
 
 ### Internet of Things
 
 | **Services** | Description |
 | -- | -- |
-| **a** | |
-| **a** | |
-| **a** | |
+| **AWS IoT Platform** | |
+| **AWS Greengrass** | Lets you run local compute, messaging, and data caching for connected IoT devices in an efficient and secure way. It enables devices to run AWS Lambda functions, keep data in sync, and communicate with other devices securely, even when Internet connectivity is not possible.|
+| **AWS IoT Button** | Programmable button based on the Amazon Dash Button hardware. This simple Wi-Fi device is easy to configure and designed for developers to get started with AWS IoT, AWS Lambda, Amazon DynamoDB, Amazon SNS, and many other Amazon web services without writing device-specific code. You can code the button’s logic in the cloud.|
 
 ### Mobile Services
 
 | **Services** | Description |
 | -- | -- |
-| **a** | |
-| **a** | |
-| **a** | |
-| **a** | |
+| **Amazon Cognito** | Lets you add users to sign up and sign in to your mobile and web apps fast and reliably. Authenticate users through social identity providers such as Twitter, Facebook, or Amazon, along with other SAML identity solutions, or by using a custom identity system.|
+| **AWS Mobile Hub** | Provides an integrated experience for configuring, discovering, and accessing AWS cloud services for creating, testing, deploying, and monitoring usage of mobile applications.|
+| **AWS Device Farm** | Test mobile apps on real mobile devices and tablets.|
+| **Amazon Mobile Analytics** | Web service that enables you to measure the app usage and revenue.|
