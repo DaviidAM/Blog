@@ -17,4 +17,5 @@ El examen se compone de 65 preguntas tipo test, y el tiempo para completarlo es 
 
 ## Chapters
 
+- [Chapter 0 - AWS Well-Architected Framework](<00 - well-architected_framework.md>)
 - [Chapter 1 - Overview of Cloud Computing and Amazon Web Services](<01 - cloud_computing.md>)
