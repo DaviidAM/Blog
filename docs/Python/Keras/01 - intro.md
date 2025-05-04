@@ -173,6 +173,19 @@ X_train.shape # (700, 2) --> 70% del total
 X_test.shape # (300, 2) --> 30% del total
 ```
 
+### Categorizar datos
+
+En el ámbito de las redes neuronales, a veces es conveniente categorizar la salida en lugar de tenerla como un valor esperado (por ejemplo, [0, 1, 2, 3, 4, 5, ...]). Es preferible representar la salida en categorías, lo que facilita ajustar el número de neuronas en la capa de salida. Por ejemplo, el número 1 se representaría como [0, 1, 0, 0, ...], el número 2 se representaría como [0, 0, 2, 0, ...], etc.
+
+```python
+from tensorflow.keras.utils import to_categorical
+
+# ...
+# num_classes indica el número de categorías que queremos distinguir
+y_cat_test = to_categorical(y_test,num_classes=10)
+
+```
+
 ## Escalar valores
 
 Es importante normalizar y esclar los datos para que la red neuronal puede trabajar sin problemas.

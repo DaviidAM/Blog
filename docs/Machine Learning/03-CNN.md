@@ -78,3 +78,35 @@ l1p4 --> l2p2
 l2p1 -.-> lnpn
 l2p2 -.-> lnpn
 ```
+
+## Capas de agrupamiento (Pooling layers)
+
+Estas capas aceptan capas convolucionales como entrada, en esta capa podemos aplicar lógical para simplificar el tamaño de la red (reducir número de parámetros), por ejemplo agrupando en ventanas 2x2 y cogiendo el valor máximo o la media.
+
+```mermaid
+flowchart LR
+input[Input]
+conv[Conv]
+pool[Pool]
+
+input --> conv --> pool
+```
+
+Otra ténica muy utilizada dentro de CNN es usar "Dropout" layers, que como se explicó anteriormente son capas en las que desactivamos un porcentaje del número total de neuronas de forma aleatoria.
+
+## Arquitectura final de una red convolucional
+
+Hay muchas combinaciones posibles para crear una red convolucional, y la única forma de encotrar la más correcta es probando varias conbinaciones y usar los resultados obtenidos en un intento para mejorar el siguiente intento.
+
+Lo que si tienen en común todas las redes convolucionales es que todas tienen como penúltima capa una capa especial llamada "Fully connected layer (FC)" que implemente una función para poder conectar la salida de la capa anterior a la capa de salida (última capa), esta capa de salida tendrá el mismo número de neuronas como número de clases.
+
+```mermaid
+flowchart LR
+input[Input]
+conv[Conv]
+pool[Pool]
+fc[FC]
+out[Out]
+
+input --> conv --> pool --> fc --> out
+```
