@@ -1,8 +1,5 @@
 # Elementos HTML
 
-[[toc]]
-
-
 HTML consta de más de 100 elementos, pero todos ellos se definen con etiquetas.
 
 ```html
@@ -55,10 +52,10 @@ Los párrafos son elementos HTML que permiten establecer un párrafo de texto, s
 
 ```html
 <p>Contenido de párrafo</p>
+
 ```
 
 ### Modificadores de texto
-
 #### Strong
 
 Enfatiza un texto, se definen con la etiqueta `<strong>`.
@@ -70,8 +67,8 @@ Enfatiza un texto, se definen con la etiqueta `<strong>`.
 ### Énfasis
 
 Enfatiza un texto, se definen con la etiqueta `<em>`.
-
 ```html
+
 <em>Contenido de em</em>
 ```
 
