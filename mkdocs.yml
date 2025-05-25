@@ -89,6 +89,9 @@ nav:
               - TensorBoard: "Python/Keras/02 - tensorboard.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
+      - HTML:
+          - Básico: "HTML/01 - html.md"
+          - Elementos: "HTML/02 - elements.md"
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
