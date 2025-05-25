@@ -1,7 +1,5 @@
 # HTML
 
-https://www.youtube.com/watch?v=3nYLTiY5skU&t=1h21m
-
 HTML (`Lenguaje de Marcado de Hipertexto`, del inglés `HyperText Markup Language`) es el componente más fundamental de la Web.
 
 En una página web confluyen muchos elementos y tecnologías diferentes: por ejemplo, para interactuar con la web se utiliza JavaScript (el más común), y para modificar la apariencia del contenido se emplea CSS. Sin embargo, **HTML se enfoca únicamente en definir/describir la estructura y el contenido que vemos en la web**, es decir, en establecer elementos como títulos, imágenes, párrafos, enlaces, y otros componentes básicos.
