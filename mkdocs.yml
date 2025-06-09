@@ -108,5 +108,7 @@ nav:
               - "Terraform/basic/03 - Infrastructure.md"
   - ✍️ Notas:
       - Mejorar apariencia de la terminal: "notes/beautiful_terminal.md"
+      - PowerShell Alias y funciones: "notes/powershell_custom_shortcuts.md"
       - VSCode:
           - DevContainer: "notes/VSCode/devcontainer.md"
+          - Ruff: "notes/VSCode/ruff.md"
