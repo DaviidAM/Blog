@@ -96,8 +96,10 @@ nav:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
       - Machine Learning:
-          - Básico: "Machine Learning/01-concepts.md"
-          - ANNs: "Machine Learning/02-ANNs.md"
+          - Deep Learning:
+              - Básico: "Machine Learning/Deep Learning/01-concepts.md"
+              - ANNs: "Machine Learning/Deep Learning/02-ANNs.md"
+              - CNNs: "Machine Learning/Deep Learning/03-CNN.md"
       - AWS Services:
           - SAA Exam: "AWS/00 - SAA_exam.md"
           - Cloud Computing: "AWS/01 - cloud_computing.md"
