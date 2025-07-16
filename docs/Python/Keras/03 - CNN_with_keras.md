@@ -242,4 +242,96 @@ model.add(Dense(10, activation='softmax'))
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy']) # Más métricas explicadas en https://keras.io/metrics/
+
+# Evaluar modelo
+metrics = model.evaluate(x_test, y_cat_test)
+metrics.columns
+
+metrics[['accuracy','val_accuracy']].plot()
+metrics[['loss','val_loss']].plot()
+
+from sklearn.metrics import classification_report,confusion_matrix
+
+predictions = model.predict_classes(x_test)
+predictions[0] #7
+print(classification_report(y_test,predictions))
+
+confusion_matrix(y_test,predictions)
+
+import seaborn as sns
+plt.figure(figsize=(10,6))
+sns.heatmap(confusion_matrix(y_test,predictions),annot=True)
+
+# Usar modelo con una nueva imagen
+my_image = x_test[0]
+plt.imshow(my_image) 
+## Recordar hacer reshape --> (num_images,width,height,color_channels)
+model.predict_classes(my_image.reshape(1,32,32,3)) # array([3], dtype=int64)
+```
+
+## Otras funciones para CNN
+
+### Generar datos de imágenes
+
+Existe la clase `ImageDataGenerator` que permite generar datos de imágenes de manera dinámica, lo que permite aumentar el tamaño del dataset y ahorrar memoria al no tener que cargar todas las imágenes en memoria.
+
+```python
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+image_gen = ImageDataGenerator(
+    rotation_range=10, # gira las imágenes
+    width_shift_range=0.1, # desplaza las imágenes horizontalmente
+    height_shift_range=0.1, # desplaza las imágenes verticalmente
+    shear_range=0.1, # distorsiona las imágenes
+    zoom_range=0.1, # zoom en las imágenes
+    horizontal_flip=True, # invierte las imágenes
+    fill_mode='nearest' # rellena las imágenes
+)
+image_gen.random_transform(x_train[0]) # Aplica de forma random las transformaciones sobre la imagen seleccionada.
+
+image_gen.flow_from_directory(train_path) # Genera datos de imágenes de manera dinámica. Para que funcione correctamente, el dataset debe estar organizado en carpetas con el nombre de la categoría.
+# Ejemplo:
+# train_path
+#     ├── cat
+#     │   ├── cat.0.jpg
+#     │   ├── cat.1.jpg
+#     │   ├── cat.2.jpg
+#     │   ├── cat.3.jpg
+#     │   ├── cat.4.jpg
+#     │   ├── cat.5.jpg
+#     │   ├── cat.6.jpg
+#     │   ├── cat.7.jpg
+#     │   ├── cat.8.jpg
+#     │   └── cat.9.jpg
+#     └── dog
+#         ├── dog.0.jpg
+#         ├── dog.1.jpg
+#         ├── dog.2.jpg
+#         ├── dog.3.jpg
+#         ├── dog.4.jpg
+#         ├── dog.5.jpg
+#         ├── dog.6.jpg
+#         ├── dog.7.jpg
+#         ├── dog.8.jpg
+#         └── dog.9.jpg
+
+# Usar ImageDataGenerator para generar datos de pruebas y test de manera dinámica.
+train_image_gen = image_gen.flow_from_directory(
+    train_path,
+    target_size=image_shape[:2], # Tamaño de la imagen (ancho, alto, canales)
+    batch_size=16,
+    class_mode='binary', # Clasificación binaria (otra opcion es 'categorical')
+    color_mode='rgb'
+)
+test_image_gen = image_gen.flow_from_directory(
+    test_path,
+    target_size=image_shape[:2],
+    batch_size=16,
+    class_mode='binary',
+    color_mode='rgb',
+    shuffle=False # No se debe mezclar el test set
+)
+
+# Comprobar categorías del train set
+test_image_gen.class_indices # {'cat': 0, 'dog': 1}
 ```
