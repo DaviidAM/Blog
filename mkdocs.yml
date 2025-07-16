@@ -87,6 +87,7 @@ nav:
           - Keras:
               - Introducción: "Python/Keras/01 - intro.md"
               - TensorBoard: "Python/Keras/02 - tensorboard.md"
+              - CNNs: "Python/Keras/03 - CNN.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - HTML:
