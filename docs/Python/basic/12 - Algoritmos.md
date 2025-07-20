@@ -2,6 +2,11 @@
 
 En python hay muchos algoritmos que nos pueden ayudar a realizar operaciones de forma más sencilla.
 
+Links:
+- [LeetCode Algoritmos](https://leetcode.com/explore/)
+- [NeetCode Algoritmos](https://neetcode.io/)
+
+
 ## Algoritmo de Kadane
 
 La idea del algoritmo de Kadane es recorrer la matriz de izquierda a derecha y, para cada elemento, encontrar la suma máxima entre todas las submatrices que terminan en ese elemento . El resultado será el máximo de todos estos valores.
@@ -29,3 +34,4 @@ arr = [2, 3, -8, 7, -1, 2, 3]
 print(maxSubarraySum(arr))
 # Salida: 11 --> Generado por sub-array {7, -1, 2, 3}
 ```
+
