@@ -88,6 +88,7 @@ nav:
               - Introducción: "Python/Keras/01 - intro.md"
               - TensorBoard: "Python/Keras/02 - tensorboard.md"
               - CNNs: "Python/Keras/03 - CNN.md"
+              - RNNs: "Python/Keras/04 - RNN.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - HTML:
@@ -101,6 +102,7 @@ nav:
               - Básico: "Machine Learning/Deep Learning/01-concepts.md"
               - ANNs: "Machine Learning/Deep Learning/02-ANNs.md"
               - CNNs: "Machine Learning/Deep Learning/03-CNN.md"
+              - RNNs: "Machine Learning/Deep Learning/04-RNN.md"
       - AWS Services:
           - SAA Exam: "AWS/00 - SAA_exam.md"
           - Cloud Computing: "AWS/01 - cloud_computing.md"
