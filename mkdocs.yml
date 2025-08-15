@@ -90,6 +90,7 @@ nav:
               - CNNs: "Python/Keras/03 - CNN.md"
               - RNNs: "Python/Keras/04 - RNN.md"
               - NLP: "Python/Keras/05 - NLP.md"
+              - Autoencoders: "Python/Keras/06 - Autoencoders.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
       - HTML:
@@ -105,6 +106,7 @@ nav:
               - CNNs: "Machine Learning/Deep Learning/03-CNN.md"
               - RNNs: "Machine Learning/Deep Learning/04-RNN.md"
               - NLP: "Machine Learning/Deep Learning/05-NLP.md"
+              - Autoencoders: "Machine Learning/Deep Learning/06-Autoencoders.md"
       - AWS Services:
           - SAA Exam: "AWS/00 - SAA_exam.md"
           - Cloud Computing: "AWS/01 - cloud_computing.md"
