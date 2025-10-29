@@ -97,6 +97,10 @@ nav:
       - HTML:
           - Básico: "HTML/01 - html.md"
           - Elementos: "HTML/02 - elements.md"
+      - CSS:
+          - Introducción: "CSS/01 - Overview.md"
+      - SQL:
+          - Introducción y Estructura: "SQL/01 - intro.md"
       - Kafka:
           - Resumen: "Kafka/01 - Overview.md"
           - Ejemplos con Python: "Kafka/python_kafka_examples.md"
