@@ -2,7 +2,7 @@
 
 Las **redes neuronales convolucionales** es un tipo de red muy útil para trabajar con imágenes.
 
-> Antes de seguir con este punto es importante tener algunos conocimientos de redes neuronales con keras (librería de python), puedes ver [Keras](../Python/Keras/01%20-%20intro.md) para tener más información.
+> Antes de seguir con este punto es importante tener algunos conocimientos de redes neuronales con keras (librería de python), puedes ver [Keras](../../Python/Keras/01%20-%20intro.md) para tener más información.
 
 ## Las imágenes son matrices
 

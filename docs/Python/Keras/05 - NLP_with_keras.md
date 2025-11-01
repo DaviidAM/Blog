@@ -2,7 +2,7 @@
 
 Como ya explicamos en la teoría de **redes para procesamiento de lenguaje natural**, estas redes neuronales son muy útil cuando necesitamos generar texto.
 
-[Teoría NLPs](../../Machine%20Learning/05-NLP.md)
+[Teoría NLPs](../../Machine%20Learning/Deep%20Learning/05-NLP.md)
 
 ## Ejemplo de NLP con Keras
 

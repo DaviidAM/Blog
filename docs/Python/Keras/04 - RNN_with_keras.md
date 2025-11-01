@@ -2,7 +2,7 @@
 
 Como ya explicamos en la teoría de **redes neuronales relacionales (RNNs)**, estas redes neuronales son muy útil cuando necesitamos trabajar con secuencias de datos.
 
-[Teoría RNNs](../../Machine%20Learning/04-RNN.md)
+[Teoría RNNs](../../Machine%20Learning/Deep%20Learning/04-RNN.md)
 
 ## Ejemplo RNN con una onda sinusoidal
 

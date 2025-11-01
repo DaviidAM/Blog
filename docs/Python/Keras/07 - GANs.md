@@ -1,6 +1,6 @@
 # GANs en Keras
 
-[Teoría GANs](../../Machine%20Learning/07-GANs.md)
+[Teoría GANs](../../Machine%20Learning/Deep%20Learning/07-GANs.md)
 
 ## Ejemplo de GANs con Keras
 

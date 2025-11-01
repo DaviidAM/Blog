@@ -1,8 +1,6 @@
 # Autoencoders en Keras
 
-
-
-[Teoría Autoencoders](../../Machine%20Learning/06-Autoencoders.md)
+[Teoría Autoencoders](../../Machine%20Learning/Deep%20Learning/06-Autoencoders.md)
 
 ## Ejemplo de Autoencoders con Keras
 

@@ -2,7 +2,8 @@
 
 Como ya explicamos en la teoría de **redes neuronales convolucionales (CNNs)**, estas redes neuronales son muy útil cuando necesitamos trabajar con imágenes.
 
-[Teoría CNNs](../../Machine%20Learning/03-CNN.md)
+[Teoría CNNs](../../Machine%20Learning/Deep%20Learning/03-CNN.md)
+
 
 ## CNN con imágenes en blanco y negro
 

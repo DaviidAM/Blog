@@ -2,7 +2,7 @@ site_name: DaviidAM Blog
 site_url: https://daviidam.github.io/Blog
 
 theme:
-  name: material # material or dracula
+  name: material # material or dracula or simple-blog
   features:
     #- navigation.tabs
     #- navigation.sections
@@ -70,6 +70,8 @@ nav:
               - "Python/basic/07 - Conjuntos de datos.md"
               - "Python/basic/08 - Excepciones.md"
               - "Python/basic/09 - Orientada a objetos.md"
+              - "Python/basic/10 - Decoradores.md"
+              - "Python/basic/11 - Entorno virtual.md"
               - "Python/basic/12 - Algoritmos.md"
           - NumPy:
               - Básico: "Python/NumPy/01 - basic.md"
@@ -87,9 +89,9 @@ nav:
           - Keras:
               - Introducción: "Python/Keras/01 - intro.md"
               - TensorBoard: "Python/Keras/02 - tensorboard.md"
-              - CNNs: "Python/Keras/03 - CNN.md"
-              - RNNs: "Python/Keras/04 - RNN.md"
-              - NLP: "Python/Keras/05 - NLP.md"
+              - CNNs: "Python/Keras/03 - CNN_with_keras.md"
+              - RNNs: "Python/Keras/04 - RNN_with_keras.md"
+              - NLP: "Python/Keras/05 - NLP_with_keras.md"
               - Autoencoders: "Python/Keras/06 - Autoencoders.md"
               - GANs: "Python/Keras/07 - GANs.md"
           - Pydantic:
@@ -114,7 +116,8 @@ nav:
               - Autoencoders: "Machine Learning/Deep Learning/06-Autoencoders.md"
               - GANs: "Machine Learning/Deep Learning/07-GANs.md"
       - AWS Services:
-          - SAA Exam: "AWS/00 - SAA_exam.md"
+          - SAA Exam: "AWS/0 - SAA_exam.md"
+          - Well-Architected Framework: "AWS/00 - well-architected_framework.md"
           - Cloud Computing: "AWS/01 - cloud_computing.md"
       - Terraform:
           - Básico:

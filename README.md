@@ -23,7 +23,9 @@ In this repository, you'll find a range of topics that I have studied and docume
 ## Launch server locally
 
 ```bash
-source .env/bin/activate
+uv venv .venv
+uv sync
+source .venv/bin/activate
 mkdocs build && mkdocs serve    
 ````
 
