@@ -1,0 +1,3430 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://daviidam.github.io/Blog/HTML/02%20-%20elements/">
+      
+      
+        <link rel="prev" href="../01%20-%20html/">
+      
+      
+        <link rel="next" href="../../CSS/01%20-%20Overview/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Elementos - DaviidAM Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elementos-html" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DaviidAM Blog" class="md-header__button md-logo" aria-label="DaviidAM Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DaviidAM Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Elementos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DaviidAM Blog" class="md-nav__button md-logo" aria-label="DaviidAM Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DaviidAM Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚 Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Básico
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/01%20-%20Fundamentos%20del%20lenguaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tipos de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/02%20-%20Operadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operadores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/03%20-%20Estructuras%20Condicionales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/04%20-%20Bucles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bucles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/05%20-%20Funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/06%20-%20Ambito%20de%20variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ámbito de Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/07%20-%20Conjuntos%20de%20datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conjuntos de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/08%20-%20Excepciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Excepciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/09%20-%20Orientada%20a%20objetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación orientada a objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/10%20-%20Decoradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decoradores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/11%20-%20Entorno%20virtual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entorno virtual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/12%20-%20Algoritmos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algoritmos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NumPy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            NumPy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/02%20-%20arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/03%20-%20index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Índices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/04%20-%20operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pandas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/02%20-%20series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Series
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/03%20-%20dataframes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataFrames
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/04%20-%20input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lectura y escritura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Matplotlib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/matplotlib/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/matplotlib/02%20-%20seaborn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seaborn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Keras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Keras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/01%20-%20intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/02%20-%20tensorboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TensorBoard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/03%20-%20CNN_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/04%20-%20RNN_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/05%20-%20NLP_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/06%20-%20Autoencoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autoencoders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/07%20-%20GANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pydantic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pydantic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pydantic/01%20-%20modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01%20-%20html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Elementos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elementos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-normales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos normales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos normales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#titulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Títulos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Títulos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#titulo-de-la-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Título de la web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#titulos-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Títulos de contenido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parrafo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Párrafo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificadores-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificadores de texto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modificadores de texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strong" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strong
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enfasis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Énfasis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Énfasis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#small" class="md-nav__link">
+    <span class="md-ellipsis">
+      small
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-desordenada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista desordenada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-ordenadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista ordenadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lista ordenadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumeracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumeración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inversión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inicio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formularios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desplegables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desplegables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-reemplazables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos reemplazables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos reemplazables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imágenes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iframes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enlaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-semanticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos semánticos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos semánticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aside" class="md-nav__link">
+    <span class="md-ellipsis">
+      aside
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section" class="md-nav__link">
+    <span class="md-ellipsis">
+      section
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nav" class="md-nav__link">
+    <span class="md-ellipsis">
+      nav
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      footer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#article" class="md-nav__link">
+    <span class="md-ellipsis">
+      article
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#span" class="md-nav__link">
+    <span class="md-ellipsis">
+      span
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    <span class="md-ellipsis">
+      div
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-vacios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos vacíos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elementos vacíos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadatos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salto-de-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salto de línea
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atributos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atributos-globales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos globales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos específicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atributos específicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-href" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de href
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSS/01%20-%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/01%20-%20intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción y Estructura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/02%20-%20consultas_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consultas de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/03%20-%20definicion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definición de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/04%20-%20manipulacion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kafka
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kafka/01%20-%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resumen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kafka/python_kafka_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos con Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deep Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Deep Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/01-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/02-ANNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ANNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/03-CNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/04-RNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/05-NLP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/06-Autoencoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autoencoders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/07-GANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AWS Services
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/0%20-%20SAA_exam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SAA Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/00%20-%20well-architected_framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Well-Architected Framework
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/01%20-%20cloud_computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Terraform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_1" id="__nav_2_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Básico
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/01%20-%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/02%20-%20Configurations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/03%20-%20Infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ✍️ Notas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ✍️ Notas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/beautiful_terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mejorar apariencia de la terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/powershell_custom_shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerShell Alias y funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VSCode
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            VSCode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/VSCode/devcontainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevContainer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/VSCode/ruff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ruff
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="elementos-html">Elementos HTML<a class="headerlink" href="#elementos-html" title="Permanent link">#</a></h1>
+<p>HTML consta de más de 100 elementos, pero todos ellos se definen con etiquetas.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nombre_etiqueta</span><span class="p">&gt;</span>Contenido de la etiqueta<span class="p">&lt;/</span><span class="nt">nombre_etiqueta</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li>Toda la línea anterior sería un <strong>elemento HTML</strong>. </li>
+<li>Mientras que <code>&lt;nombre_etiqueta&gt;</code> es la <strong>etiqueta HTML</strong>.<ul>
+<li>Dentro de las etiquetas podemos distinguir <strong>etiqueta de apertura</strong> y <strong>etiqueta de cierre</strong>. Estas etiquetas siempre deben coincidir dentro de un mismo elemento.</li>
+</ul>
+</li>
+</ul>
+<p>Existen 3 tipos de elementos dentro de HTML:
+* Elementos normales (o contenedores).
+* Elementos reemplazables.
+* Elementos vacíos.</p>
+<blockquote>
+<p>Documentación sobre elementos HTML: https://developer.mozilla.org/en-US/</p>
+</blockquote>
+<h2 id="elementos-normales">Elementos normales<a class="headerlink" href="#elementos-normales" title="Permanent link">#</a></h2>
+<p>Son aquellos que tienen una etiqueta de apertura y una de cierre, y pueden contener texto, otros elementos o ambos.</p>
+<h3 id="titulos">Títulos<a class="headerlink" href="#titulos" title="Permanent link">#</a></h3>
+<h4 id="titulo-de-la-web">Título de la web<a class="headerlink" href="#titulo-de-la-web" title="Permanent link">#</a></h4>
+<p>Los títulos son elementos HTML que permiten establecer un título, se definen con la etiqueta <code>&lt;title&gt;</code> en el <code>head</code>. Este es el nombre que aparece en la pestaña del navegador y en el buscador de google.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Contenido de Título<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>Es importante para el SEO ya que es el nombre que aparece en el buscador de google.</p>
+</blockquote>
+<h4 id="titulos-de-contenido">Títulos de contenido<a class="headerlink" href="#titulos-de-contenido" title="Permanent link">#</a></h4>
+<p>Los títulos son elementos HTML que permiten dar un título a un documento HTML. Estos títulos van del h1 al h6, donde el h1 es el título más importante y el h6 es el título menos importante.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Contenido de h1<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Contenido de h2<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Contenido de h3<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Contenido de h4<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Contenido de h5<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Contenido de h6<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="parrafo">Párrafo<a class="headerlink" href="#parrafo" title="Permanent link">#</a></h3>
+<p>Los párrafos son elementos HTML que permiten establecer un párrafo de texto, se definen con la etiqueta <code>&lt;p&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="modificadores-de-texto">Modificadores de texto<a class="headerlink" href="#modificadores-de-texto" title="Permanent link">#</a></h3>
+<h4 id="strong">Strong<a class="headerlink" href="#strong" title="Permanent link">#</a></h4>
+<p>Enfatiza un texto, se definen con la etiqueta <code>&lt;strong&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Contenido de strong<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="enfasis">Énfasis<a class="headerlink" href="#enfasis" title="Permanent link">#</a></h3>
+<p>Enfatiza un texto, se definen con la etiqueta <code>&lt;em&gt;</code>.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Contenido de em<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<h4 id="small">small<a class="headerlink" href="#small" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Contenido de small<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="lista-desordenada">Lista desordenada<a class="headerlink" href="#lista-desordenada" title="Permanent link">#</a></h3>
+<p>Las listas desordenadas son elementos HTML que permiten establecer una lista de elementos, se definen con la etiqueta <code>&lt;ul&gt;</code>. Cada elementos de la lista se representa con la etiqueta <code>&lt;li&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Nota: Hay casos en los que no hace falta la etiqueta de cierre. Como los <code>&lt;li&gt;</code>. Pero <strong>no es recomendable</strong>, luego en el navegador automáticamente se cierran.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 1
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 2
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 3
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="lista-ordenadas">Lista ordenadas<a class="headerlink" href="#lista-ordenadas" title="Permanent link">#</a></h3>
+<p>Las listas ordenadas son elementos HTML que permiten establecer una lista de elementos, se definen con la etiqueta <code>&lt;ol&gt;</code>. Cada elementos de la lista se representa con la etiqueta <code>&lt;li&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="enumeracion">Enumeración<a class="headerlink" href="#enumeracion" title="Permanent link">#</a></h4>
+<p>Dentro de las listas ordenadas podemos elegir cómo queremos que se enumere con el atributo <code>type</code>.</p>
+<ul>
+<li>Ordenar numérico: <code>type="1"</code></li>
+<li>Ordenar alfabético en mayúsculas: <code>type="A"</code></li>
+<li>Ordenar alfabético en minúsculas: <code>type="a"</code></li>
+<li>Ordenar en romanos en mayúsculas: <code>type="I"</code></li>
+<li>Ordenar en romanos en minúsculas: <code>type="i"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;I&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="inversion">Inversión<a class="headerlink" href="#inversion" title="Permanent link">#</a></h4>
+<p>Podemos indicar si queremos invertir el orden de la lista con el atributo <code>reversed</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">reversed</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="inicio">Inicio<a class="headerlink" href="#inicio" title="Permanent link">#</a></h4>
+<p>Podemos indicar el número desde el que queremos que comience la lista con el atributo <code>start</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">start</span><span class="o">=</span><span class="s">&quot;5&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Contenido de li 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="formularios">Formularios<a class="headerlink" href="#formularios" title="Permanent link">#</a></h3>
+<p>Los formularios son elementos HTML que permiten establecer un formulario, se definen con la etiqueta <code>&lt;form&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/&lt;url donde se deben enviar los datos&gt;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Información personal<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Nombre:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Introduce tu nombre&quot;</span> <span class="na">required</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;[a-zA-Z ]+&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Otra forma quitando el for del label, sin usar id ni el div --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: block;&quot;</span><span class="p">&gt;</span>Apellidos:
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;apellidos&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Introduce tus apellidos&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;telefono&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Introduce tu teléfono&quot;</span> <span class="na">required</span> <span class="na">pattern</span><span class="o">=</span><span class="s">&quot;[0-9]{9}&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">datalist</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;languages-list&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;HTML&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;CSS&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;JavaScript&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">datalist</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;language&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;language&quot;</span> <span class="na">list</span><span class="o">=</span><span class="s">&quot;languages-list&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="desplegables">Desplegables<a class="headerlink" href="#desplegables" title="Permanent link">#</a></h3>
+<p>Los desplegables son elementos HTML que permiten establecer un desplegable, se definen con la etiqueta <code>&lt;details&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">summary</span><span class="p">&gt;</span>Contenido desplegable<span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido del desplegable<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="tablas">Tablas<a class="headerlink" href="#tablas" title="Permanent link">#</a></h3>
+<p>Las tablas son elementos HTML que permiten establecer una tabla, se definen con la etiqueta <code>&lt;table&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Contenido de th<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Contenido de td<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="script">Script<a class="headerlink" href="#script" title="Permanent link">#</a></h3>
+<p>Los scripts son elementos HTML que permiten establecer un script de javascript, se definen con la etiqueta <code>&lt;script&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Contenido del script&quot;</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="dialog">Dialog<a class="headerlink" href="#dialog" title="Permanent link">#</a></h3>
+<p>Un dialog (Diálogo) es un elemento HTML que permite establecer un diálogo, se definen con la etiqueta <code>&lt;dialog&gt;</code>.</p>
+<p>Es una especia de modal, es decir, un cuadro de diálogo que se muestra en una ventana modal. Normalmente se debe abrir cuando se hace clic en un botón.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">dialog</span> <span class="na">open</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Contenido del diálogo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido del diálogo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Botón<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dialog</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Ejemplo de usar dialog con javascript:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;show-dialog&quot;</span><span class="p">&gt;</span>Abrir diálogo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">dialog</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;custom-dialog&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Contenido del diálogo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido del diálogo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;close-dialog&quot;</span><span class="p">&gt;</span>Cerrar diálogo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dialog</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">show</span><span class="o">-</span><span class="nx">dialog</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">custom</span><span class="o">-</span><span class="nx">dialog</span><span class="p">.</span><span class="nx">showModal</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="o">-</span><span class="nx">dialog</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">window</span><span class="p">.</span><span class="nx">custom</span><span class="o">-</span><span class="nx">dialog</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="elementos-reemplazables">Elementos reemplazables<a class="headerlink" href="#elementos-reemplazables" title="Permanent link">#</a></h2>
+<p>Son elementos cuyo contenido es reemplazado por recursos externos, como imágenes, videos, iframes, etc. No necesitan etiqueta de cierre.</p>
+<h3 id="imagenes">Imágenes<a class="headerlink" href="#imagenes" title="Permanent link">#</a></h3>
+<p>Las imágenes son elementos HTML que permiten establecer una imagen, se definen con la etiqueta <code>&lt;img&gt;</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;ruta_de_la_imagen&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Texto alternativo&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Si añadimos la imagen dentro de un anchor es posible descargar la imagen. Sólo funciona con recursos que tengas dentro de tu dominio.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">download</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;ruta_de_la_imagen&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span>
+        <span class="na">src</span><span class="o">=</span><span class="s">&quot;ruta_de_la_imagen&quot;</span>
+        <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Texto alternativo&quot;</span>
+    <span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Posibles atributos de la etiqueta img:</p>
+<ul>
+<li><code>src</code>: ruta de la imagen</li>
+<li><code>alt</code>: texto alternativo</li>
+<li><code>width</code>: ancho de la imagen</li>
+<li><code>height</code>: alto de la imagen</li>
+<li><code>title</code>: título de la imagen</li>
+<li><code>loading</code>: indica cómo se debe cargar la imagen<ul>
+<li><code>loading="lazy"</code>: indica que la imagen se debe cargar de forma diferida.</li>
+<li><code>loading="eager"</code>: indica que la imagen se debe cargar de forma inmediata.</li>
+<li><code>loading="auto"</code>: indica que la imagen se debe cargar de forma automática.</li>
+</ul>
+</li>
+<li><code>style</code>: indica el estilo de la imagen. Ejemplos:</li>
+<li><code>style="width: 100%"</code>: indica que la imagen se debe ajustar al ancho de su contenedor.</li>
+<li><code>style="height: 100%"</code>: indica que la imagen se debe ajustar al alto de su contenedor.</li>
+<li><code>style="aspect-ratio: 16 / 9"</code>: indica que la imagen se debe ajustar al aspecto de su contenedor.</li>
+</ul>
+<h3 id="videos">Videos<a class="headerlink" href="#videos" title="Permanent link">#</a></h3>
+<p>Los videos son elementos HTML que permiten establecer un video, se definen con la etiqueta <code>&lt;video&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">video</span> <span class="err">{</span><span class="na">atributos</span><span class="err">...}</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;ruta_del_video&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Posibles atributos de la etiqueta video:</p>
+<ul>
+<li><code>controls</code>: muestra los controles del video</li>
+<li><code>autoplay</code>: reproduce el video automáticamente</li>
+<li><code>loop</code>: repite el video</li>
+<li><code>muted</code>: silencia el video</li>
+<li><code>poster</code>: muestra una imagen mientras se carga el video</li>
+</ul>
+<h3 id="audios">Audios<a class="headerlink" href="#audios" title="Permanent link">#</a></h3>
+<p>Los audios son elementos HTML que permiten establecer un audio, se definen con la etiqueta <code>&lt;audio&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">audio</span> <span class="err">{</span><span class="na">atributos</span><span class="err">...}</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;ruta_del_audio&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Posibles atributos de la etiqueta audio:</p>
+<ul>
+<li><code>controls</code>: muestra los controles del audio</li>
+<li><code>autoplay</code>: reproduce el audio automáticamente</li>
+<li><code>loop</code>: repite el audio</li>
+<li><code>muted</code>: silencia el audio</li>
+</ul>
+<h3 id="iframes">Iframes<a class="headerlink" href="#iframes" title="Permanent link">#</a></h3>
+<p>Un iframe (Inline Frame) es un elemento HTML que permite insertar un documento HTML dentro de otro. El contenido del iframe se carga de forma independiente al documento que lo contiene. Se definen con la etiqueta <code>&lt;iframe&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;ruta_del_iframe&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Posibles atributos de la etiqueta iframe:</p>
+<ul>
+<li><code>width</code>: ancho del iframe</li>
+<li><code>height</code>: alto del iframe</li>
+<li><code>title</code>: título del iframe</li>
+<li><code>allow</code>: indica qué funcionalidades se permiten al iframe.</li>
+</ul>
+<h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">#</a></h3>
+<p>Los inputs son elementos HTML que permiten al usuario escribir información, se definen con la etiqueta <code>&lt;input&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Se puede cambiar el atributo <code>type</code> para crear diferentes tipos de campos:</p>
+<ul>
+<li><code>text</code>: campo de texto</li>
+<li><code>password</code>: campo para contraseñas</li>
+<li><code>email</code>: campo para correos electrónicos</li>
+<li><code>number</code>: campo para números</li>
+<li><code>datetime-local</code>: campo para fechas y horas</li>
+<li><code>checkbox</code>: casilla de verificación</li>
+</ul>
+<h3 id="enlaces">Enlaces<a class="headerlink" href="#enlaces" title="Permanent link">#</a></h3>
+<p>Los enlaces son elementos HTML que permiten establecer un enlace, se definen con la etiqueta <code>&lt;a&gt;</code>. Suele ir dentro de nav.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span><span class="p">&gt;</span>Contenido de enlace<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Por defecto los enlaces se abren en la misma pestaña. Si queremos que el enlace se abra en una nueva pestaña, debemos añadir el atributo <code>target="_blank"</code>. También es recomendable eliminar la referencia de origen con <code>rel="noopener noreferrer"</code>.</p>
+<ul>
+<li><code>noopener</code>: impide que el enlace abra en una pestaña nueva. De esta forma, el nuevo enlace no puede acceder a la ventana actual.</li>
+<li><code>noreferrer</code>: impide que el enlace abra en una pestaña nueva y, además, no envia el referer (información sobre la página actual). De esta forma, el nuevo enlace no puede acceder a la ventana actual ni tener información sobre la página que lo llama. En navegadores modernos no es necesario añadirlo ya que por defecto lo hace.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;noopener noreferrer&quot;</span><span class="p">&gt;</span>Contenido de enlace<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>También es posible hacer enlaces internos dentro de la misma web, pero para ello debemos definir con un identificador dichos puntos.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#section_1&quot;</span><span class="p">&gt;</span>Contenido de enlace<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+...
+
+<span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;section_1&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de section<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de section<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="elementos-semanticos">Elementos semánticos<a class="headerlink" href="#elementos-semanticos" title="Permanent link">#</a></h3>
+<p>Este grupo de elementos son muy importantes para conseguir un archivo HTML con buena semántica, es decir, con una buena estructura para generar la página web.</p>
+<h4 id="aside">aside<a class="headerlink" href="#aside" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;aside&gt;</code> es un elemento HTML que se utiliza para definir contenido tangencialmente relacionado con el contenido principal de la página web. Se utiliza para definir contenido que no sea fundamental para la comprensión principal de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de aside<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de aside<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="section">section<a class="headerlink" href="#section" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;section&gt;</code> es un elemento HTML que se utiliza para definir una sección de contenido en una página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de section<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de section<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="nav">nav<a class="headerlink" href="#nav" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;nav&gt;</code> es un elemento HTML que se utiliza para definir una sección de navegación en una página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de nav<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de nav<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="footer">footer<a class="headerlink" href="#footer" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;footer&gt;</code> es un elemento HTML que se utiliza para definir el pie de página de una página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de footer<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de footer<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="main">main<a class="headerlink" href="#main" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;main&gt;</code> es un elemento HTML que se utiliza para definir el contenido principal de una página web, sólo puede haber un main por página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web. Es el contenido que hace la página web única.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de main<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de main<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="article">article<a class="headerlink" href="#article" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;article&gt;</code> es un elemento HTML que se utiliza para definir un artículo en una página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de article<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de article<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="span">span<a class="headerlink" href="#span" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;span&gt;</code> es un elemento HTML que se utiliza para definir un elemento en una página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web. Se usa para separar estilo de una parte de la web cuando no afecta a la semántica de la página.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Contenido de span<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="div">div<a class="headerlink" href="#div" title="Permanent link">#</a></h4>
+<p>El elemento <code>&lt;div&gt;</code> es un elemento HTML que se utiliza para definir un elemento en una página web. Se utiliza para definir contenido que sea fundamental para la comprensión principal de la página web. Se usa para agrupar elementos que no afectan a la semántica de la página.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de div<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contenido de div<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="elementos-vacios">Elementos vacíos<a class="headerlink" href="#elementos-vacios" title="Permanent link">#</a></h2>
+<p>Un elemento vacío en HTML es aquel que no tiene contenido y no requiere etiqueta de cierre</p>
+<h3 id="metadatos">Metadatos<a class="headerlink" href="#metadatos" title="Permanent link">#</a></h3>
+<p>Los metadatos son elementos HTML que permiten establecer metadatos, se definen con la etiqueta <code>&lt;meta&gt;</code>. Usando la etiqueta metadatos se pueden definir muchos metadatos de la página web. No todos los metadatos son elementos vacíos, pero sí la mayoría.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Especifica la codificación --&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Define la descripción de la página --&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Descripción de la página&quot;</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Ajusta el ancho de la página al tamaño del dispositivo --&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width&quot;</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Propiedades para open graph (Para SEO) --&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Título de la página en open graph&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Descripción de la página en open graph&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Ruta de la imagen en open graph&quot;</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Propiedades para redireccionar por idiomas (Para SEO) --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;alternate&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.&lt;same_url&gt;/en&quot;</span> <span class="na">hreflang</span><span class="o">=</span><span class="s">&quot;en-GB&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;alternate&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.&lt;same_url&gt;/es&quot;</span> <span class="na">hreflang</span><span class="o">=</span><span class="s">&quot;es-ES&quot;</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Propiedad para redireccionar a la principal (Para SEO, Ej sin www) --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;canonical&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://&lt;same_url&gt;&quot;</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Estilos en línea --&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">        </span><span class="c">/* background-color: #09f; */</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- Más posible metadatos ... --&gt;</span>
+</code></pre></div>
+<blockquote>
+<p><code>description</code> es importante para el SEO ya que es la descripción que suele aparecer (no siempre) en los resultados de búsqueda de google.</p>
+</blockquote>
+<h3 id="link">Link<a class="headerlink" href="#link" title="Permanent link">#</a></h3>
+<p>Los link son elementos HTML que permiten establecer un enlace, se definen con la etiqueta <code>&lt;link&gt;</code>. Es la etiqueta que se usa para definir el <code>favicon</code>, es decir, el icono que aparece en la pestaña del navegador.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;icon&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/jpg&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/docs/HTML/im-logo-1.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="salto-de-linea">Salto de línea<a class="headerlink" href="#salto-de-linea" title="Permanent link">#</a></h3>
+<p>Los saltos de línea son elementos HTML que permiten establecer un salto de línea, se definen con la etiqueta <code>&lt;br&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="atributos">Atributos<a class="headerlink" href="#atributos" title="Permanent link">#</a></h2>
+<p>Los atributos son pares de clave valor que se agregan a las etiquetas HTML para proporcionar más información sobre el elemento. Se definen escribiendo el nombre del atributo seguido del valor entre comillas.</p>
+<p>Existen dos tipos de atributos:</p>
+<h3 id="atributos-globales">Atributos globales<a class="headerlink" href="#atributos-globales" title="Permanent link">#</a></h3>
+<p>Los atributos globales son aquellos que se pueden utilizar en cualquier elemento HTML. Algunos de los atributos globales son:</p>
+<ul>
+<li><code>class</code>: Indica una o varias clases CSS que se aplican al elemento. También sirve para identificar elementos, pero este id se puede   repetir.</li>
+<li><code>id</code>: Indica el <strong>identificador único</strong> del elemento. Este id se puede repetir.</li>
+<li><code>style</code>: Indica el estilo CSS que se aplica al elemento.</li>
+<li><code>title</code>: Indica el título del elemento.</li>
+<li><code>role</code>: Indica el rol del elemento. Se utiliza para mejorar la accesibilidad de la página web.</li>
+</ul>
+<h3 id="atributos-especificos">Atributos específicos<a class="headerlink" href="#atributos-especificos" title="Permanent link">#</a></h3>
+<p>Los atributos específicos son aquellos que solo se pueden utilizar en determinados elementos HTML. Algunos de los atributos específicos son:</p>
+<ul>
+<li><code>src</code> en <code>&lt;img&gt;</code>: Indica la ruta de la imagen a mostrar.</li>
+<li><code>href</code> en <code>&lt;a&gt;</code>: Indica la ruta del enlace.</li>
+<li><code>type</code> en <code>&lt;input&gt;</code>: Indica el tipo de campo de formulario.</li>
+<li><code>alt</code> en <code>&lt;img&gt;</code>: Indica el texto alternativo de la imagen en caso de no poderse mostrar.</li>
+<li><code>hidden</code> en <code>&lt;img&gt;</code>: Indica que la imagen no se muestra.</li>
+</ul>
+<h4 id="tipos-de-href">Tipos de href<a class="headerlink" href="#tipos-de-href" title="Permanent link">#</a></h4>
+<p>Dentro de href se pueden definir varios tipos de enlaces:</p>
+<ul>
+<li>
+<p>Enlaces internos: Enlaces que apuntan a una página dentro de la misma web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enlaces externos: Enlaces que apuntan a una página fuera de la misma web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span><span class="p">&gt;</span>Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enlaces de correo: Enlaces que apuntan a un correo electrónico.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;mailto:info@example.com&quot;</span><span class="p">&gt;</span>info@example.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enlaces de teléfono: Enlaces que apuntan a un número de teléfono.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;tel:+34913333333&quot;</span><span class="p">&gt;</span>+34 913 33 33 33<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enlace a whatsapp: Enlaces que apuntan a whatsapp.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;whatsapp://send?text=Hola&amp;phone=+34666666666&quot;</span><span class="p">&gt;</span>WhatsApp<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Enlaces de mapa: Enlaces que apuntan a un mapa.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.openstreetmap.org/#map=18/40.4085/-3.69196&quot;</span><span class="p">&gt;</span>Madrid<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

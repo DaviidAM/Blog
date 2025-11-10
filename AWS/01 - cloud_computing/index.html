@@ -1,0 +1,3463 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://daviidam.github.io/Blog/AWS/01%20-%20cloud_computing/">
+      
+      
+        <link rel="prev" href="../00%20-%20well-architected_framework/">
+      
+      
+        <link rel="next" href="../../Terraform/basic/01%20-%20Introduction/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Cloud Computing - DaviidAM Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-1-overview-of-cloud-computing-and-amazon-web-services" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DaviidAM Blog" class="md-header__button md-logo" aria-label="DaviidAM Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DaviidAM Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cloud Computing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DaviidAM Blog" class="md-nav__button md-logo" aria-label="DaviidAM Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DaviidAM Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚 Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Básico
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/01%20-%20Fundamentos%20del%20lenguaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tipos de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/02%20-%20Operadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operadores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/03%20-%20Estructuras%20Condicionales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/04%20-%20Bucles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bucles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/05%20-%20Funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/06%20-%20Ambito%20de%20variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ámbito de Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/07%20-%20Conjuntos%20de%20datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conjuntos de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/08%20-%20Excepciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Excepciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/09%20-%20Orientada%20a%20objetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación orientada a objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/10%20-%20Decoradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decoradores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/11%20-%20Entorno%20virtual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entorno virtual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/12%20-%20Algoritmos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algoritmos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NumPy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            NumPy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/02%20-%20arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/03%20-%20index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Índices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/04%20-%20operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pandas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/02%20-%20series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Series
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/03%20-%20dataframes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataFrames
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/04%20-%20input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lectura y escritura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Matplotlib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/matplotlib/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/matplotlib/02%20-%20seaborn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seaborn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Keras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Keras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/01%20-%20intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/02%20-%20tensorboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TensorBoard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/03%20-%20CNN_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/04%20-%20RNN_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/05%20-%20NLP_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/06%20-%20Autoencoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autoencoders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/07%20-%20GANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pydantic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pydantic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pydantic/01%20-%20modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/01%20-%20html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/02%20-%20elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elementos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSS/01%20-%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/01%20-%20intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción y Estructura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/02%20-%20consultas_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consultas de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/03%20-%20definicion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definición de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SQL/04%20-%20manipulacion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kafka
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kafka/01%20-%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resumen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kafka/python_kafka_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos con Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deep Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Deep Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/01-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/02-ANNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ANNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/03-CNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/04-RNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/05-NLP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/06-Autoencoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autoencoders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/07-GANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AWS Services
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0%20-%20SAA_exam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SAA Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00%20-%20well-architected_framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Well-Architected Framework
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Cloud Computing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Computing
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-running-cloud-computing-on-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of Running Cloud Computing on AWS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advantages of Running Cloud Computing on AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-models-of-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Models of Cloud Computing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-cloud-computing-deployment-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Cloud Computing Deployment Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      History of AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-global-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Global Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Global Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-zones-azs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Availability zones (AZs)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local zones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#points-of-presence-pops-edge-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points of presence (POPs) - Edge locations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-security-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Security and Compliance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-products-and-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Products and Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Products and Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-and-content-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage and Content Delivery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developer-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messaging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artificial-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artificial Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-of-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet of Things
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Terraform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_1" id="__nav_2_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Básico
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/01%20-%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/02%20-%20Configurations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/03%20-%20Infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ✍️ Notas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ✍️ Notas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/beautiful_terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mejorar apariencia de la terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/powershell_custom_shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerShell Alias y funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VSCode
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            VSCode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/VSCode/devcontainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevContainer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/VSCode/ruff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ruff
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-1-overview-of-cloud-computing-and-amazon-web-services">Chapter 1 - Overview of Cloud Computing and Amazon Web Services<a class="headerlink" href="#chapter-1-overview-of-cloud-computing-and-amazon-web-services" title="Permanent link">#</a></h1>
+<p>The National Institute of Standards and Technology (NIST) defines cloud computing as:</p>
+<blockquote>
+<p>"Ubiquitous, convenient, on-demand access to shared computing resources that can be rapidly provisioned and released with minimal management effort."</p>
+</blockquote>
+<p>Three basic characteristics of the cloud:</p>
+<ul>
+<li><strong>On demand</strong>: Cloud computing enables you to use IT infrastructure as a resource that is always available on demand per your needs.</li>
+<li><strong>Accessible from the Internet</strong>: All the resources that you deploy in the cloud are accessible from the Internet.</li>
+<li><strong>Pay-as-you-go model</strong>: When you use cloud computing, you pay per your usage.</li>
+</ul>
+<p>Many reasons for using the cloud. For example, If you are a startup, you can just focus on the next big idea and forget about purchasing and managing the hardware.</p>
+<h2 id="advantages-of-running-cloud-computing-on-aws">Advantages of Running Cloud Computing on AWS<a class="headerlink" href="#advantages-of-running-cloud-computing-on-aws" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Advantages</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gaining agility</strong></td>
+<td>You can provision all the resources you need almost instantly.</td>
+</tr>
+<tr>
+<td><strong>Avoiding guessing about capacity</strong></td>
+<td>Since the cloud is elastic, which means you can scale up and scale down based on your requirements at any time, you can provision only the resources that you need at any point of time.</td>
+</tr>
+<tr>
+<td><strong>Moving from capital expenses to variable/flexible expenses</strong></td>
+<td>It becomes difficult to get approval for new hardware each time you want to start a project. With an operational expense model, you have zero up-front costs.</td>
+</tr>
+<tr>
+<td><strong>Benefiting from massive economics of scale</strong></td>
+<td>A user of cloud computing benefits from the massive economies of scale since hundreds of thousands of customers are aggregated in the cloud. This in turns translates to low pay-as-you-go prices.</td>
+</tr>
+<tr>
+<td><strong>Avoiding spending money on data centers</strong></td>
+<td>With cloud computing you don’t have any overhead to manage the data center, and you can focus more on what the business needs.</td>
+</tr>
+<tr>
+<td><strong>Benefiting from the pace of innovation</strong></td>
+<td>Customers can use all the new products and features instantly, whenever they  are released. The moment a new feature is available, it is automatically available to you.</td>
+</tr>
+<tr>
+<td><strong>Going global in minutes</strong></td>
+<td>With cloud computing, you don’t have to wait for months or even days to operate from a different region. With just a few mouse clicks and a few minutes, you can be ready to operate from a different region. You can do it almost instantly.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="three-models-of-cloud-computing">Three Models of Cloud Computing<a class="headerlink" href="#three-models-of-cloud-computing" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Cloud Computing Models</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Infrastructure as a Service (IaaS)</strong></td>
+<td>Provides the foundation for a cloud IT environment that includes compute (server), networking, storage, and space in a data center.</td>
+</tr>
+<tr>
+<td><strong>Platform as a Service (PaaS)</strong></td>
+<td>Just want to focus on deploying and managing the applications. PaaS eliminates the job of managing the entire infrastructure layer.</td>
+</tr>
+<tr>
+<td><strong>Soft-ware as a Service (SaaS)</strong></td>
+<td>Way of delivering applications over the Internet. SaaS provider offers a complete product that is hosted and managed by the product vendor, you just need to think about how you are going to use the product.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Three Models of Cloud Computing" src="../img/Three%20Models%20of%20Cloud%20Computing.png" /></p>
+<h3 id="three-cloud-computing-deployment-models">Three Cloud Computing Deployment Models<a class="headerlink" href="#three-cloud-computing-deployment-models" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Cloud Computing Deployment Models</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>All-in cloud</strong></td>
+<td>You design and deploy an application in a public cloud using a cloud service provider.</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>You host some of the applications in the cloud and some of the applications at your own premises.</td>
+</tr>
+<tr>
+<td><strong>On-premise or private cloud</strong></td>
+<td>When you deploy the resources in your own data center using virtualization or resource management tools.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="history-of-aws">History of AWS<a class="headerlink" href="#history-of-aws" title="Permanent link">#</a></h2>
+<ul>
+<li>AWS was officially launched in 2006.</li>
+<li>AWS has more than 175 fully featured services.</li>
+</ul>
+<h2 id="aws-global-infrastructure">AWS Global Infrastructure<a class="headerlink" href="#aws-global-infrastructure" title="Permanent link">#</a></h2>
+<ul>
+<li>AWS works in 190 countries around the world.</li>
+<li>AWS serves these customers via its global infrastructure, which consists of <strong>regions</strong>, <strong>availability zones (AZs)</strong>, and <strong>points of presence (POPs)</strong>.</li>
+</ul>
+<h3 id="regions">Regions<a class="headerlink" href="#regions" title="Permanent link">#</a></h3>
+<ul>
+<li>AWS maintains 24 regions spanning five continents in the world, with three additional regions being planned.</li>
+<li>A region is a physical location in the world that comprises clusters of highly redundant data centers. The regions are separated geographically, which provides data sovereignty. You can think of a region as a distinct geographical location where AWS services are made available.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: By default, data residing in a region never leaves a region unless explicitly moved by AWS customers.</p>
+</blockquote>
+<ul>
+<li>AWS also offers the <strong>GovCloud</strong> region in the United States, which is designed for government agencies to run their workloads in the cloud. Though it is designed for government agencies, other customers can also use this region.</li>
+</ul>
+<h3 id="availability-zones-azs">Availability zones (AZs)<a class="headerlink" href="#availability-zones-azs" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Within each region there are availability zones (AZs). An AZ consists of one to six data centers, with redundant power supplies and networking connectivity. As of this writing, there are 76 AZs.</p>
+</li>
+<li>
+<p>A single data center can be part of only one AZ. Each AZ is located in a different floodplain; power grids are designed in such a way that a natural calamity or disaster does not impact multiple AZs.</p>
+</li>
+<li>
+<p>The networking among the AZs in a particular region is designed in such a way that it offers inexpensive, low-latency, private, fiber-optic network connectivity to another AZ in the same region. The latency between the AZs within a region is less than a single digit.</p>
+</li>
+<li>
+<p>The biggest advantage of this is that you can design an application in such a way that it can run on multiple AZs, and since the data can be synchronously replicated within the AZs, in the case of a disaster taking one of the AZs down, there is no impact on your application.</p>
+</li>
+</ul>
+<h3 id="local-zones">Local zones<a class="headerlink" href="#local-zones" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>Using this local zones, you can run a few specific AWS services closer to user populations where no AWS regions exist.</p>
+</li>
+<li>
+<p>The local zones are connected to the parent region via a high-bandwidth private network, thereby enabling seamless access to rest of the AWS series that is unavailable in these local areas.</p>
+</li>
+</ul>
+<p><img alt="AWS region, AZ and local zone" src="../img/region-az-localzone.png" /></p>
+<h3 id="points-of-presence-pops-edge-locations">Points of presence (POPs) - Edge locations<a class="headerlink" href="#points-of-presence-pops-edge-locations" title="Permanent link">#</a></h3>
+<ul>
+<li>
+<p>These edge locations are in most of the major cities across the globe.</p>
+</li>
+<li>
+<p>At the time of this writing, there are 216 POPs.</p>
+</li>
+<li>
+<p>The edge locations are mainly used by content delivery networks to distribute content to nearby end users to reduce latency and provide fast performance.</p>
+</li>
+<li>
+<p>For example, when you watch a video from Amazon Video, the video will be cached in an edge location so that when another customer watches the same video, it will be served from an edge loca- tion for a quick turnaround time and better user experience.</p>
+</li>
+<li>
+<p>In addition to edge locations, AWS has recently added regional edge cache locations between the main servers and the edge locations. When an object is not accessed for a long time, it goes out of the cache, but because the regional edge cache maintains a larger cache, the object can be stored there for a longer amount of time.</p>
+</li>
+<li>
+<p>The POPs consist of both edge locations as well as the regional edge caches.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>EXAM TIP</strong>: AWS has 24 regions and 76 AZs as of this writing. Since AWS keeps adding regions and AZs, please check the web site to get the latest numbers.</p>
+</blockquote>
+<h2 id="aws-security-and-compliance">AWS Security and Compliance<a class="headerlink" href="#aws-security-and-compliance" title="Permanent link">#</a></h2>
+<p>AWS follows the model of <strong>shared security</strong>, which means AWS is responsible for the secu- rity of the cloud, and customers are responsible for the security in the cloud.</p>
+<p>In the case of a managed service (for example, Amazon RDS, Amazon Redshift, Amazon DynamoDB, and so on), AWS is also responsible for the security configuration of it.</p>
+<p><img alt="AWS shared security model" src="../img/aws_shared_security_model.png" /></p>
+<h2 id="aws-products-and-services">AWS Products and Services<a class="headerlink" href="#aws-products-and-services" title="Permanent link">#</a></h2>
+<p>Now, AWS has more than 175 services that include compute, storage, networking, database, analytics, application services, deployment, management, and mobile services.</p>
+<h3 id="compute">Compute<a class="headerlink" href="#compute" title="Permanent link">#</a></h3>
+<p>The compute services include both servers and serverless configuration.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Elastic Compute Cloud (EC2)</strong></td>
+<td>It includes the virtual servers, called <em>instances</em>, in the cloud. Depending on the use case, the customer can choose from a variety of instance types.</td>
+</tr>
+<tr>
+<td><strong>Amazon EC2 Auto Scaling</strong></td>
+<td>It helps in automatically scaling the Amazon EC2 instances up and down as per the policies you define, it ensures that you are always running with the desired number of instances. No additional charge for using Amazon EC2 Auto Scaling. Amazon EC2 Auto Scaling integrates with Elastic Load Balancer</td>
+</tr>
+<tr>
+<td><strong>AWS Lambda</strong></td>
+<td>AWS Lambda enables you to run code without provisioning or managing any servers or infrastructure. You simply develop code for your application or back-end service and define the event triggers with the AWS Lambda service. AWS Lambda then takes care of provisioning the resources to run your code, produce the results, and tear down the code. You pay only for the compute time when the code is getting executed; there is no charge when the code is not running.</td>
+</tr>
+<tr>
+<td><strong>Amazon EC2 Container Service (ECS)</strong></td>
+<td>It allows you to run Docker containers on Amazon EC2 instances. There are no separate charges for Amazon ECS; you pay only for the AWS resources used.</td>
+</tr>
+<tr>
+<td><strong>Amazon Elastic Kubernetes Service (EKS)</strong></td>
+<td>It is a fully managed Kubernetes service that makes it easy for you to run your code on AWS without needing to install and operate your own Kubernetes control plane or worker nodes.</td>
+</tr>
+<tr>
+<td><strong>AWS Fargate</strong></td>
+<td>It is a serverless compute engine for containers that works with both Amazon ECS and Amazon EKS. It utomatically scale, load balance, and manage scheduling of your containers for availability.</td>
+</tr>
+<tr>
+<td><strong>AWS Elastic Beanstalk</strong></td>
+<td>It lets you run and manage web applications without worrying about the underlying infrastructure. There is no addi- tional charge for AWS Elastic Beanstalk; you pay only for the AWS resources needed to run your applications.</td>
+</tr>
+<tr>
+<td><strong>Amazon Lightsail</strong></td>
+<td>It  is the simplest way to get started with AWS for small businesses, devel- opers, students, and other users who need a simple virtual private server (VPS) solution. Amazon Lightsail provides storage, networking capacity, and compute capabilities to manage and deploy web sites and web applications in the cloud. It includes a virtualized compute server, DNS management, SSD-based storage, data transfer capa- bilities, and a static IP address for a low, predictable monthly price.</td>
+</tr>
+<tr>
+<td><strong>AWS Batch</strong></td>
+<td>It enables users to efficiently run hundreds of thousands of batch comput- ing jobs on AWS. IT dynamically provisions the optimal type and quantity of compute resources</td>
+</tr>
+<tr>
+<td><strong>AWS Outposts</strong></td>
+<td>It helps in extending AWS services to any data center. Using Outposts, you can run all the AWS services, APIs, and tools at your data center, at a partner data cen- ter, or at a colocation facility. It is an ideal platform to provide a hybrid experience. Outposts is the on-premise version of the AWS cloud.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">#</a></h3>
+<p>Networking is part of the AWS core services. AWS networking helps you to isolate your cloud infrastructure.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Virtual Private Cloud (VPC)</strong></td>
+<td>Using this service, you can isolate cloud resources within your own private virtual network. You can say that an Amazon VPC is your own data center in the cloud. You have complete control over the networking in an Amazon VPC. You can bring your own IP addresses, you can define the subnets as you want, and you have full control over the route table and network gateways.</td>
+</tr>
+<tr>
+<td><strong>Amazon Route 53</strong></td>
+<td>It is a Domain Name System (DNS) web service. It is highly available and scalable, and its SLA is 100 percent uptime. Amazon Route 53 is IPv4 as well as IPv6 compliant</td>
+</tr>
+<tr>
+<td><strong>Elastic Load Balancing</strong></td>
+<td>It allows you to automatically distribute the load across multiple Amazon EC2 instances. It can be integrated with Auto Scaling; as a result, you can auto- matically scale up and down your Amazon EC2 instance and dynamically grow and shrink your operation depending on the traffic.</td>
+</tr>
+<tr>
+<td><strong>AWS Direct Connect</strong></td>
+<td>Using this service, you can establish private, dedicated network connectivity from your data center to AWS. You can reduce bandwidth costs for high-volume data transfers and get consistent network performance.</td>
+</tr>
+<tr>
+<td><strong>AWS App Mesh</strong></td>
+<td>It helps monitor, control, debug, and trace communications between services. It's based on the open source Envoy service.</td>
+</tr>
+<tr>
+<td><strong>AWS Global Accelerator</strong></td>
+<td>It improves the availability and performance of your applications for global users. It provides a set of static IP addresses that are anycast from the AWS edge network, which provides a fixed entry point to your applications and eliminates the com- plexity of managing specific IP addresses for different AWS regions and AZs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-and-compliance">Security and Compliance<a class="headerlink" href="#security-and-compliance" title="Permanent link">#</a></h3>
+<p>The security of the cloud is the highest priority for AWS.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Identity and Access Management (IAM)</strong></td>
+<td>It is used to create users, groups, and roles. It is also used to manage and control access to AWS services and resources.</td>
+</tr>
+<tr>
+<td><strong>Amazon Inspector</strong></td>
+<td>It is an automated security assessment service that helps you to identify the security vulnerabilities in your application when it is being deployed as well as when it is running in a production system.</td>
+</tr>
+<tr>
+<td><strong>AWS Certificate Manager (ACM)</strong></td>
+<td>It is used to manage Secure Sockets Layer (SSL) certifi- cates for use with AWS services. Using ACM, you can provision, manage, and deploy SSL/Transport Layer Security (TLS) certificates.</td>
+</tr>
+<tr>
+<td><strong>AWS Directory Service</strong></td>
+<td>It is an AWS managed directory service built on Microsoft Active Directory. It can be used to manage directories in the cloud.</td>
+</tr>
+<tr>
+<td><strong>AWS Web Application Firewall (WAF)</strong></td>
+<td>It is a web application firewall that detects mali- cious traffic targeted at the web applications. Using WAF, you can create various rules with which you can protect against common attacks such as SQL injection and scripting.</td>
+</tr>
+<tr>
+<td><strong>AWS Shield</strong></td>
+<td>It is a managed service that protects against distributed denial-of-service (DDoS) attacks targeted at the web applications. There are two tiers of AWS Shield: Standard and Advanced. AWS Shield Standard is free and protects against most com- monly occurring DDoS attacks against web applications. With AWS Shield Advanced, you get higher levels of protection targeting not only against web applications but also Elastic Load Balancer, Amazon CloudFront, and Amazon Route 53.</td>
+</tr>
+<tr>
+<td><strong>Amazon GuardDuty</strong></td>
+<td>It is a threat-detection service that continuously monitors your AWS accounts and workloads to protect them. It provides broad protection of your AWS accounts, workloads, and data by helping to identify threats such as attacker reconnais- sance, instance compromise, and account compromise.</td>
+</tr>
+<tr>
+<td><strong>Amazon Macie</strong></td>
+<td>It helps you protect your data in Amazon S3 by helping you classify what data you have, the business value of that data, and the behavior associated with access to that data. It uses machine learning.</td>
+</tr>
+<tr>
+<td><strong>AWS Secrets Manager</strong></td>
+<td>It is a secrets management service that helps you protect access to your applications, services, and IT resources.</td>
+</tr>
+<tr>
+<td><strong>AWS SSO</strong></td>
+<td>AWS Single Sign-On (SSO) is an AWS service that enables you to use your existing cre- dentials from Microsoft Active Directory to access your cloud-based applications, such as AWS accounts and business applications (Office 365, Salesforce, Box), by using SSO.</td>
+</tr>
+<tr>
+<td><strong>AWS CloudHSM</strong></td>
+<td>It provides you with a dedicated hardware security module (HSM) in the AWS cloud. It helps you to meet all the contractual and regulatory com- pliance requirements. The HSM is a tamper-resistant hardware, which provides secure key storage and cryptographic operations.</td>
+</tr>
+<tr>
+<td><strong>AWS KMS</strong></td>
+<td>IT  is a managed service that helps you create and control the keys used for cryptographic operations. AWS KMS presents a single control point from which to manage keys and define policies consistently across integrated AWS services and your own applications.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage-and-content-delivery">Storage and Content Delivery<a class="headerlink" href="#storage-and-content-delivery" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Simple Shared Storage (S3)</strong></td>
+<td>It was one of the first services launched by AWS in 2006. It is the storage for the Internet, which is also used as an object store. Amazon S3 lets you store and retrieve any amount of data, at any time, from anywhere on the Web.</td>
+</tr>
+<tr>
+<td><strong>Amazon Glacier</strong></td>
+<td>Low-cost cloud storage that is mainly used for data archiving and long-term backup purposes.</td>
+</tr>
+<tr>
+<td><strong>Amazon Elastic Block Storage (EBS)</strong></td>
+<td>It provides persistent block storage for EC2 instances. You can choose from either magnetic or solid-state drive (SSD) disks for Amazon EBS volumes.</td>
+</tr>
+<tr>
+<td><strong>Amazon Elastic File System (EFS)</strong></td>
+<td>It is a fully managed service that provides easy, scalable, shared file storage with Amazon EC2 instances in the AWS cloud. It provides a simple file system interface and can be accessed concurrently for up to thousands of Amazon EC2 instances.</td>
+</tr>
+<tr>
+<td><strong>AWS Storage Gateway</strong></td>
+<td>It is a service that helps to seamlessly integrate on-premise storage with AWS cloud storage. It is delivered as a virtual machine installed in an on-premise data center. You can connect it as a file server, or you can connect it as a local disk. You can also connect it as a virtual tape library.</td>
+</tr>
+<tr>
+<td><strong>Import/Export Options</strong></td>
+<td>It  is a service that helps to transfer a large amount of data into AWS using a physical storage appliance. By doing that, you can bypass the data transfer over the Internet. You can also use <strong>AWS Snowball</strong> in which case AWS ships a physical device to your premises.</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudFront</strong></td>
+<td>It is the global content delivery network (CDN) service of AWS. Amazon CloudFront helps to accelerate the delivery of the static content of your web sites, including photos, videos, or any other web assets.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="database">Database<a class="headerlink" href="#database" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Relational Database Service (RDS)</strong></td>
+<td>Relational database. It supports both commercial and open source database engines (MySQL, Oracle, SQL Server, PostgreSQL, Maria DB and Aurora).</td>
+</tr>
+<tr>
+<td><strong>Amazon DynamoDB</strong></td>
+<td>NoSQL database. It delivers consistent, single-digit-millisecond latency at any scale. It consists of SSD storage.</td>
+</tr>
+<tr>
+<td><strong>Amazon Redshift</strong></td>
+<td>Fully managed petabyte-scale data warehouse service. It stores the data in columnar format, thereby providing better I/O efficiency. The data is continuously backed up in Amazon S3.</td>
+</tr>
+<tr>
+<td><strong>Amazon ElastiCache</strong></td>
+<td>ervice that helps in deploying an in-memory cache or data store in the cloud. It supports two open source in-memory engines: Redis and Memcached.</td>
+</tr>
+<tr>
+<td><strong>Amazon Aurora</strong></td>
+<td>It's Amazon’s relational database built for the cloud. It supports two open source RDBMS engines: MySQL and PostgreSQL. The database is constantly backed up to Amazon S3.</td>
+</tr>
+<tr>
+<td><strong>Amazon Neptune</strong></td>
+<td>Fully managed graph database service with which you can build and run applications that work with highly connected data sets.</td>
+</tr>
+<tr>
+<td><strong>Amazon QLDB</strong></td>
+<td>It's a purpose-built ledger database that provides a complete and crypto-graphically verifiable history of all changes made to your application data.</td>
+</tr>
+<tr>
+<td><strong>Amazon DocumentDB</strong></td>
+<td>Fully managed document database service for MongoDB, you can use the same MongoDB application code, drivers, and tools.</td>
+</tr>
+<tr>
+<td><strong>Amazon Keyspaces</strong></td>
+<td>Managed Apache Cassandra–compatible database service, you can run your Cassandra workloads on AWS by using the same Cassandra Query Language (CQL) code.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Athena</strong></td>
+<td>Serverless, interactive query service that enables users to easily analyze data in Amazon S3 using standard SQL.</td>
+</tr>
+<tr>
+<td><strong>Amazon EMR</strong></td>
+<td>Web service that enables users, businesses, enterprises, data analysts, researchers, and developers to easily and cost-effectively process enormous amounts of data. It utilizes a hosted Hadoop framework.</td>
+</tr>
+<tr>
+<td><strong>Amazon Elasticsearch Service</strong></td>
+<td>Fully managed web service that makes it easy to create, operate, deploy, and scale Elasticsearch clusters in the AWS cloud.</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudSearch</strong></td>
+<td>Fully managed web service in the AWS cloud that offers a simple, cost-effective, easy-to-use way to manage and scale a search solution for your application or web site.</td>
+</tr>
+<tr>
+<td><strong>AWS Data Pipeline</strong></td>
+<td>Enables users to process, transform, and move data between different AWS compute and storage services, as well as on-premise data sources, at specified intervals reliably and efficiently.</td>
+</tr>
+<tr>
+<td><strong>Amazon Kinesis</strong></td>
+<td>Fully managed service that makes it easy to collect, analyze, and process real-time, streaming data.</td>
+</tr>
+<tr>
+<td><strong>AWS Glue</strong></td>
+<td>Fully managed, extract, transform, and load (ETL) service. It can discover your data automatically and profiles the data via its built-in Glue Data Catalog. It runs ETL jobs in an Apache Spark environment and loads the data into the target. AWS Glue Data Catalog is a central metadata repository; an ETL engine that can automatically generate Scala or Python code.</td>
+</tr>
+<tr>
+<td><strong>Amazon MSK</strong></td>
+<td>Managed service for managing Apache Kafka infrastructure and operations.</td>
+</tr>
+<tr>
+<td><strong>AWS Lake Formation</strong></td>
+<td>It makes it easy to set up a secure data lake in days. A data lake is a central data repository with a large variety of data. It contains both structured and unstructured data. Using a data lake, you can manage the full life cycle of your data.</td>
+</tr>
+<tr>
+<td><strong>Amazon QuickSight</strong></td>
+<td>Easy, fast, cloud-powered, fully managed business analytics service that makes it easy to build visualizations, perform ad hoc analysis, and quickly get meaningful insights from your data.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application-services">Application Services<a class="headerlink" href="#application-services" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon API Gateway</strong></td>
+<td>Fully managed service that provides developers with an easy, simple, scalable, flexible, pay-as-you-go service that handles all aspects of building, deploying, and operating robust APIs for application back-end services such as code running on AWS Lambda, applications running on Amazon EC2, or any web application.</td>
+</tr>
+<tr>
+<td><strong>AWS Step Functions</strong></td>
+<td>Fully managed service that enables users to efficiently and securely coordinate various components of distributed applications and microservices using visual workflows. This service provides a graphical interface for users to visualize and arrange the components of their applications.</td>
+</tr>
+<tr>
+<td><strong>Amazon Simple Workflow Service (SWF)</strong></td>
+<td>Web-based cloud service that makes it easy to coordinate work across distributed application components.</td>
+</tr>
+<tr>
+<td><strong>Amazon Elastic Transcoder</strong></td>
+<td>Convert (or transcode) video and audio files from their source format into the output format of their choice.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="developer-tools">Developer Tools<a class="headerlink" href="#developer-tools" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS CodeCommit</strong></td>
+<td>Host highly scalable private Git repositories securely.</td>
+</tr>
+<tr>
+<td><strong>AWS CodePipeline</strong></td>
+<td>Managed continuous integration and continuous delivery service for quick, reliable application and infrastructure updates.</td>
+</tr>
+<tr>
+<td><strong>AWS CodeBuild</strong></td>
+<td>Builds and compiles source code, runs tests, and produces software packages that are ready to deploy, eliminating the need to provision, manage, and scale build servers.</td>
+</tr>
+<tr>
+<td><strong>AWS CodeDeploy</strong></td>
+<td>Automates code deployments to any instance or servers, including Amazon EC2 instances and servers running on-premises.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="management-tools">Management Tools<a class="headerlink" href="#management-tools" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS CloudFormation</strong></td>
+<td>Automate resource provisioning using declarative templates and deploying resource stacks. It gives developers and systems administrators an easy way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.</td>
+</tr>
+<tr>
+<td><strong>AWS Service Catalog</strong></td>
+<td>Create, manage, and distribute catalogs of approved products to end users, who can then access the products they need in a personalized portal. Administrators can control which users have access to each product to enforce compliance with organizational business policies. Administrators can also set up adopted roles so that end users only require IAM access to AWS Service Catalog to deploy approved resources.</td>
+</tr>
+<tr>
+<td><strong>AWS OpsWorks</strong></td>
+<td>Give you workflow automation for continuous deployment, automated testing for compliance and security, and a user interface that gives you visibility into your nodes and their status. The Chef server gives you full stack automation by handling operational tasks such as software and operating system configurations, package installations, database setups, and more.</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudWatch</strong></td>
+<td>Monitoring service for AWS cloud resources and the applications you run on AWS. You can use Amazon CloudWatch to collect and track metrics, collect and monitor log files, and set alarms.</td>
+</tr>
+<tr>
+<td><strong>AWS Config</strong></td>
+<td>Provides you with an AWS resource inventory, configuration history, and configuration change notifications to enable security and governance.</td>
+</tr>
+<tr>
+<td><strong>AWS CloudTrail</strong></td>
+<td>Records AWS API calls and user activity in your account and delivers log files to you via Amazon S3.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="messaging">Messaging<a class="headerlink" href="#messaging" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Simple Notification Service (SNS)</strong></td>
+<td>Highly scalable, flexible, and cost-effective web service that makes it easy to configure, operate, and send notifications from the cloud. Publish messages from an application and immediately deliver them to subscribers or other applications.</td>
+</tr>
+<tr>
+<td><strong>Amazon Simple Email Service (SES)</strong></td>
+<td>Send and receive e-mail using your own e-mail addresses and domains.</td>
+</tr>
+<tr>
+<td><strong>Amazon Simple Queue Service (SQS)</strong></td>
+<td>Managed web service that gives you access to message queues to store messages waiting to be processed. Build message queuing applications that can run on any computer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="migration">Migration<a class="headerlink" href="#migration" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Application Discovery Service</strong></td>
+<td>Migrate projects by automatically identifying applications running in on-premise data centers and mapping their associated dependencies and their performance profiles.</td>
+</tr>
+<tr>
+<td><strong>AWS Database Migration Service</strong></td>
+<td>Migrate databases to AWS reliably and securely. The source database remains fully operational during the migration, minimizing downtime.</td>
+</tr>
+<tr>
+<td><strong>AWS Snowball</strong></td>
+<td>Transport a petabyte-scale amount of data into and out of the AWS cloud.</td>
+</tr>
+<tr>
+<td><strong>AWS Server Migration Service (SMS)</strong></td>
+<td>It helps coordinate, automate, schedule, and track large-scale server migrations. Migrate thousands of on-premise workloads to AWS.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="artificial-intelligence">Artificial Intelligence<a class="headerlink" href="#artificial-intelligence" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Lex</strong></td>
+<td>Conversational chatbot interfaces using voice and text. Language-understanding capabilities and speech recognition.</td>
+</tr>
+<tr>
+<td><strong>Amazon Polly</strong></td>
+<td>Converts text into lifelike speech.</td>
+</tr>
+<tr>
+<td><strong>Amazon Rekognition</strong></td>
+<td>Image recognition.</td>
+</tr>
+<tr>
+<td><strong>Amazon SageMaker</strong></td>
+<td>Enables you to build, train, and deploy machine learning models very quickly. It provides managed instances of TensorFlow and Apache MXNet, where users can create their own machine learning algorithms.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="internet-of-things">Internet of Things<a class="headerlink" href="#internet-of-things" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS IoT Platform</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AWS Greengrass</strong></td>
+<td>Lets you run local compute, messaging, and data caching for connected IoT devices in an efficient and secure way. It enables devices to run AWS Lambda functions, keep data in sync, and communicate with other devices securely, even when Internet connectivity is not possible.</td>
+</tr>
+<tr>
+<td><strong>AWS IoT Button</strong></td>
+<td>Programmable button based on the Amazon Dash Button hardware. This simple Wi-Fi device is easy to configure and designed for developers to get started with AWS IoT, AWS Lambda, Amazon DynamoDB, Amazon SNS, and many other Amazon web services without writing device-specific code. You can code the button’s logic in the cloud.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mobile-services">Mobile Services<a class="headerlink" href="#mobile-services" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Services</strong></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Cognito</strong></td>
+<td>Lets you add users to sign up and sign in to your mobile and web apps fast and reliably. Authenticate users through social identity providers such as Twitter, Facebook, or Amazon, along with other SAML identity solutions, or by using a custom identity system.</td>
+</tr>
+<tr>
+<td><strong>AWS Mobile Hub</strong></td>
+<td>Provides an integrated experience for configuring, discovering, and accessing AWS cloud services for creating, testing, deploying, and monitoring usage of mobile applications.</td>
+</tr>
+<tr>
+<td><strong>AWS Device Farm</strong></td>
+<td>Test mobile apps on real mobile devices and tablets.</td>
+</tr>
+<tr>
+<td><strong>Amazon Mobile Analytics</strong></td>
+<td>Web service that enables you to measure the app usage and revenue.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

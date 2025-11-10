@@ -1,0 +1,3000 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://daviidam.github.io/Blog/SQL/01%20-%20intro/">
+      
+      
+        <link rel="prev" href="../../CSS/01%20-%20Overview/">
+      
+      
+        <link rel="next" href="../02%20-%20consultas_datos/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Introducción y Estructura - DaviidAM Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sql-introduccion-y-estructura" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="DaviidAM Blog" class="md-header__button md-logo" aria-label="DaviidAM Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DaviidAM Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción y Estructura
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DaviidAM Blog" class="md-nav__button md-logo" aria-label="DaviidAM Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DaviidAM Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏠 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚 Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📚 Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Básico
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/01%20-%20Fundamentos%20del%20lenguaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tipos de Datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/02%20-%20Operadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operadores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/03%20-%20Estructuras%20Condicionales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/04%20-%20Bucles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bucles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/05%20-%20Funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/06%20-%20Ambito%20de%20variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ámbito de Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/07%20-%20Conjuntos%20de%20datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conjuntos de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/08%20-%20Excepciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Excepciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/09%20-%20Orientada%20a%20objetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación orientada a objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/10%20-%20Decoradores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decoradores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/11%20-%20Entorno%20virtual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entorno virtual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/basic/12%20-%20Algoritmos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algoritmos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    NumPy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            NumPy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/02%20-%20arrays/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/03%20-%20index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Índices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/NumPy/04%20-%20operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pandas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pandas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/02%20-%20series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Series
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/03%20-%20dataframes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataFrames
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Pandas/04%20-%20input_output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lectura y escritura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_4" id="__nav_2_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Matplotlib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/matplotlib/01%20-%20basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/matplotlib/02%20-%20seaborn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seaborn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Keras
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Keras
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/01%20-%20intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/02%20-%20tensorboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TensorBoard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/03%20-%20CNN_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/04%20-%20RNN_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/05%20-%20NLP_with_keras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/06%20-%20Autoencoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autoencoders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Keras/07%20-%20GANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pydantic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Pydantic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pydantic/01%20-%20modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/01%20-%20html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML/02%20-%20elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elementos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSS/01%20-%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SQL
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introducción y Estructura
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción y Estructura
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definiciones-basicas-dentro-de-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definiciones básicas dentro de SQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definiciones básicas dentro de SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-de-datos-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base de Datos (Database)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base de Datos (Database)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beneficios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidor-server-y-dbms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor (Server) y DBMS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esquema-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esquema (Schema)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas (Tables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnas-campos-columns-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Columnas (Campos / Columns, Fields)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filas-registros-rows-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filas (Registros / Rows, Records)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celdas-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Celdas (Cells)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo práctico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      INT (Integer)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      DECIMAL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#char-y-varchar-tipos-de-caracterescadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHAR y VARCHAR (Tipos de Caracteres/Cadenas)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CHAR y VARCHAR (Tipos de Caracteres/Cadenas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#char-longitud-fija" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHAR (Longitud Fija)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varchar-longitud-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      VARCHAR (Longitud Variable)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos-de-fecha-y-hora-date-and-time-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Datos de Fecha y Hora (Date and Time Types)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-numericos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos Numéricos Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-caracteres-extendidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Caracteres Extendidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-concepto-de-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Concepto de NULL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clave-primaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clave primaria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clave primaria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rol-como-identificador-unico-unicidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rol como Identificador Único (Unicidad)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soporte-para-conexiones-y-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soporte para Conexiones y Relaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-y-rendimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización y Rendimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02%20-%20consultas_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consultas de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03%20-%20definicion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definición de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04%20-%20manipulacion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kafka
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kafka/01%20-%20Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resumen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kafka/python_kafka_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejemplos con Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deep Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Deep Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/01-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/02-ANNs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ANNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/03-CNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/04-RNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RNNs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/05-NLP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NLP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/06-Autoencoders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autoencoders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Machine%20Learning/Deep%20Learning/07-GANs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GANs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AWS Services
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/0%20-%20SAA_exam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SAA Exam
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/00%20-%20well-architected_framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Well-Architected Framework
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/01%20-%20cloud_computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Terraform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_1" id="__nav_2_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Básico
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Básico
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/01%20-%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/02%20-%20Configurations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terraform/basic/03%20-%20Infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ✍️ Notas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ✍️ Notas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/beautiful_terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mejorar apariencia de la terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/powershell_custom_shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerShell Alias y funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VSCode
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            VSCode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/VSCode/devcontainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevContainer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/VSCode/ruff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ruff
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sql-introduccion-y-estructura">SQL - Introducción y Estructura<a class="headerlink" href="#sql-introduccion-y-estructura" title="Permanent link">#</a></h1>
+<p>SQL (Structured Query Language) es el lenguaje que se usa para hablar con las bases de datos.</p>
+<h2 id="definiciones-basicas-dentro-de-sql">Definiciones básicas dentro de SQL<a class="headerlink" href="#definiciones-basicas-dentro-de-sql" title="Permanent link">#</a></h2>
+<h3 id="base-de-datos-database">Base de Datos (Database)<a class="headerlink" href="#base-de-datos-database" title="Permanent link">#</a></h3>
+<p>Una base de datos es esencialmente un contenedor para almacenar datos, agrupados de forma organizada y estructurada.</p>
+<p>Puedes imaginarla como una carpeta grande donde se guarda todo lo relacionado con una aplicación o sistema.</p>
+<blockquote>
+<p>Ejemplo: Si tienes una empresa, puedes tener una base de datos llamada <code>EmpresaDB</code> donde se almacena la información de empleados, productos, ventas, etc.​</p>
+</blockquote>
+<h4 id="beneficios">Beneficios<a class="headerlink" href="#beneficios" title="Permanent link">#</a></h4>
+<ul>
+<li>
+<p>Manejo de grandes volúmenes de datos: Pueden gestionar enormes cantidades de datos (a veces millones), algo que las hojas de cálculo simples no pueden manejar sin romperse.</p>
+</li>
+<li>
+<p>Eficiencia en consultas: Permiten "hablar" a los datos para hacer preguntas y obtener resultados de manera rápida y sencilla, un proceso mucho más rápido que buscar manualmente en archivos dispersos.</p>
+</li>
+<li>
+<p>Seguridad: Son más seguras para almacenar datos importantes y permiten controlar quién accede a qué.</p>
+</li>
+</ul>
+<h3 id="servidor-server-y-dbms">Servidor (Server) y DBMS<a class="headerlink" href="#servidor-server-y-dbms" title="Permanent link">#</a></h3>
+<p>Aunque la base de datos es el contenedor de los datos, necesita tanto hardware como software para funcionar y ser accesible:</p>
+<ul>
+<li>
+<p>Servidor: Es la máquina física, o una PC muy potente, donde reside la base de datos. El servidor es necesario porque las computadoras personales suelen ser débiles y no están disponibles 24/7. Un servidor potente está siempre disponible (24/7).</p>
+</li>
+<li>
+<p>Sistema de Gestión de Bases de Datos (DBMS): Es un software que actúa como el administrador de la base de datos. El DBMS se encarga de gestionar todas las solicitudes (consultas SQL) enviadas a la base de datos, priorizar qué SQL debe ejecutarse primero, y manejar la seguridad.</p>
+</li>
+</ul>
+<h3 id="esquema-schema">Esquema (Schema)<a class="headerlink" href="#esquema-schema" title="Permanent link">#</a></h3>
+<p>El esquema se encuentra dentro de la base de datos y representa el siguiente nivel de organización.</p>
+<p>Un esquema es un contenedor lógico dentro de una base de datos que agrupa objetos relacionados, como tablas, vistas y procedimientos.</p>
+<p>Sirve para organizar los objetos dentro de la base de datos y, además, facilitar la gestión de permisos o separar lógicamente diferentes partes de una aplicación.</p>
+<p>Un esquema se puede comparar con una sub-carpeta dentro de la carpeta principal (la base de datos).</p>
+<blockquote>
+<p>Ejemplo: Dentro de la base de datos <code>EmpresaDB</code> puedes tener un esquema llamado <code>recursos_humanos</code> que agrupe objetos sólo de ese departamento, y otro esquema llamado <code>ventas</code> para las tablas de ventas.​</p>
+</blockquote>
+<h3 id="tablas-tables">Tablas (Tables)<a class="headerlink" href="#tablas-tables" title="Permanent link">#</a></h3>
+<p>La tabla es el objeto fundamental para almacenar datos dentro de la base de datos. Se la describe como:</p>
+<ul>
+<li>Una colección estructurada de datos.</li>
+<li>Similar a una hoja de cálculo simple o una cuadrícula (como en Excel).</li>
+<li>Organiza los datos en columnas.</li>
+<li>Contiene múltiples columnas y filas.</li>
+<li>Es un objeto que se encuentra dentro de un esquema (Schema).</li>
+</ul>
+<p>Las tablas se almacenan físicamente en archivos de base de datos en el almacenamiento en disco, aunque para el usuario se representan como una abstracción de filas y columnas.</p>
+<p>Cada tabla está dentro de un esquema, y cada esquema está dentro de una base de datos.</p>
+<blockquote>
+<p>Ejemplo: Dentro del esquema <code>recursos_humanos</code> puedes tener una tabla llamada <code>empleados</code> con columnas como <code>id_empleado</code>, <code>nombre</code>, y <code>fecha_ingreso</code>.</p>
+</blockquote>
+<h3 id="columnas-campos-columns-fields">Columnas (Campos / Columns, Fields)<a class="headerlink" href="#columnas-campos-columns-fields" title="Permanent link">#</a></h3>
+<p>Las columnas definen el tipo de datos que se almacenan. Son los atributos o características del objeto que describe la tabla.</p>
+<ul>
+<li>Cada columna trata sobre un tipo de dato.</li>
+<li>Definen la estructura de la tabla.</li>
+<li>Ejemplos de columnas incluyen el ID del cliente, los nombres, las puntuaciones o las fechas de cumpleaños.</li>
+<li>A veces se les llama campos (fields).</li>
+<li>Cada columna tiene un nombre y un tipo de dato.</li>
+<li>Ejemplos de tipos de datos incluyen INT, DECIMAL, CHAR o VARCHAR.</li>
+</ul>
+<h3 id="filas-registros-rows-records">Filas (Registros / Rows, Records)<a class="headerlink" href="#filas-registros-rows-records" title="Permanent link">#</a></h3>
+<p>Las filas, también llamadas registros (records), son donde se almacenan los datos reales.</p>
+<ul>
+<li>Cada fila representa una entrada o registro completo de datos.</li>
+<li>Por ejemplo, en una tabla de clientes, cada registro (fila) representa a un cliente individual (como Maria, John o Peter).</li>
+</ul>
+<h3 id="celdas-cells">Celdas (Cells)<a class="headerlink" href="#celdas-cells" title="Permanent link">#</a></h3>
+<p>La celda es la intersección o el solapamiento (overlapping) entre una columna y una fila.</p>
+<ul>
+<li>Una celda contiene una pieza individual de datos.</li>
+<li>Es un valor único.</li>
+<li>Cada valor dentro de la celda debe almacenar un tipo de dato específico.</li>
+</ul>
+<h2 id="ejemplo-practico">Ejemplo práctico<a class="headerlink" href="#ejemplo-practico" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Crear una base de datos</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">EmpresaDB</span><span class="p">;</span>
+
+<span class="c1">-- Usar la base de datos</span>
+<span class="n">USE</span><span class="w"> </span><span class="n">EmpresaDB</span><span class="p">;</span>
+
+<span class="c1">-- Crear un esquema</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">recursos_humanos</span><span class="p">;</span>
+
+<span class="c1">-- Crear una tabla dentro del esquema</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">recursos_humanos</span><span class="p">.</span><span class="n">empleados</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id_empleado</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">       </span><span class="c1">-- Columna: identifica el id (cada fila tendrá un valor para esta columna)</span>
+<span class="w">  </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="w">               </span><span class="c1">-- Columna: almacena el nombre del empleado</span>
+<span class="w">  </span><span class="n">fecha_ingreso</span><span class="w"> </span><span class="nb">DATE</span><span class="w">                 </span><span class="c1">-- Columna: almacena la fecha de ingreso del empleado</span>
+<span class="p">);</span>
+</code></pre></div>
+<h2 id="tipos-de-datos">Tipos de datos<a class="headerlink" href="#tipos-de-datos" title="Permanent link">#</a></h2>
+<h3 id="int-integer">INT (Integer)<a class="headerlink" href="#int-integer" title="Permanent link">#</a></h3>
+<p>El tipo de dato <code>INT</code> se utiliza para almacenar números enteros.</p>
+<ul>
+<li>Uso: Se define para una columna cuyo contenido es exclusivamente numérico y no contiene caracteres.</li>
+<li>Ejemplos: Valores como 1, 2 o 30 son ejemplos de números enteros que pueden almacenarse como INT.</li>
+<li>Contexto: Cuando se definen columnas como INT, esto ayuda a evitar problemas de rendimiento y asegura que se utilice el tipo de dato más preciso para el contenido.</li>
+</ul>
+<h3 id="decimal">DECIMAL<a class="headerlink" href="#decimal" title="Permanent link">#</a></h3>
+<p>El tipo de dato <code>DECIMAL</code> se utiliza para almacenar números que contienen un punto decimal. Almacena números con precisión exacta y escala fija, ideal para valores monetarios o cantidades exactas.</p>
+<p>• Ejemplo: Un valor como 3.14 se almacenaría como DECIMAL.</p>
+<h3 id="char-y-varchar-tipos-de-caracterescadenas">CHAR y VARCHAR (Tipos de Caracteres/Cadenas)<a class="headerlink" href="#char-y-varchar-tipos-de-caracterescadenas" title="Permanent link">#</a></h3>
+<p>Estos tipos de datos se utilizan para almacenar caracteres (strings), como nombres, descripciones o cualquier valor que contenga texto.</p>
+<h4 id="char-longitud-fija">CHAR (Longitud Fija)<a class="headerlink" href="#char-longitud-fija" title="Permanent link">#</a></h4>
+<p>El tipo de dato <code>CHAR</code> siempre tiene una longitud fija. Almacena cadenas de longitud variable con caracteres ASCII no Unicode, usa 1 byte por carácter, eficiente para datos en idiomas que no necesitan Unicode.</p>
+<ul>
+<li>Comportamiento: Si se define un campo como CHAR con una longitud de, por ejemplo, cinco caracteres, el sistema siempre irá y reservará ese espacio de cinco caracteres para el almacenamiento, independientemente de la longitud real del valor insertado.</li>
+</ul>
+<h4 id="varchar-longitud-variable">VARCHAR (Longitud Variable)<a class="headerlink" href="#varchar-longitud-variable" title="Permanent link">#</a></h4>
+<p>El tipo de dato <code>VARCHAR</code> (también conocido como VCHAR) es más dinámico en comparación con CHAR.</p>
+<ul>
+<li>Uso: Se utiliza para columnas que contienen caracteres, como un nombre de persona o un número de teléfono. Al definir una columna como VARCHAR, debe especificarse la longitud máxima, por ejemplo, VARCHAR(50).</li>
+</ul>
+<h3 id="tipos-de-datos-de-fecha-y-hora-date-and-time-types">Tipos de Datos de Fecha y Hora (Date and Time Types)<a class="headerlink" href="#tipos-de-datos-de-fecha-y-hora-date-and-time-types" title="Permanent link">#</a></h3>
+<p>Estos tipos se utilizan para almacenar valores que representan momentos específicos:</p>
+<ul>
+<li>DATE (Fecha): Se utiliza para almacenar información de fecha. Una fecha generalmente se compone del año, el mes y el día.</li>
+<li>TIME (Tiempo): Se utiliza para almacenar información de tiempo. Esto incluye componentes como horas, minutos y segundos.</li>
+<li>DATETIME o TIMESTAMP: Este tipo combina la información de fecha junto con la hora. El término TIMESTAMP se usa comúnmente en bases de datos como Oracle, Postgress y MySQL, mientras que en SQL Server se le llama DATETIME.</li>
+<li>Soporta fechas desde el 1 de enero de 1753 hasta el 31 de diciembre de 9999.</li>
+<li>DATETIME2: Este es un formato específico que aparece en las definiciones de columnas, como en la capa silver de un almacén de datos.</li>
+<li>Soporta fechas desde el 1 de enero del año 1 hasta el 31 de diciembre de 9999.</li>
+</ul>
+<blockquote>
+<p>Nota: Las funciones de SQL que extraen partes de las fechas, como DAY, MONTH, YEAR o DATEPART, devuelven un valor de tipo INTEGER.</p>
+</blockquote>
+<h3 id="tipos-numericos-adicionales">Tipos Numéricos Adicionales<a class="headerlink" href="#tipos-numericos-adicionales" title="Permanent link">#</a></h3>
+<p>Además de los enteros (INT) y decimales (DECIMAL), existen variantes numéricas:</p>
+<ul>
+<li>FLOAT: Se utiliza para variables y valores numéricos que contienen puntos decimales y que necesitan una precisión flotante.</li>
+<li>Almacena números en forma de punto flotante con precisión variable y puede perder precisión en cálculos complejos, siendo más adecuado para mediciones científicas o valores aproximados. </li>
+<li>INTEGER: Se confirma su uso al definir variables para almacenar recuentos, como el total de clientes.
+Generalmente, las funciones de agregación como SUM, AVG, MIN y MAX requieren que la expresión o el argumento que se les pasa sea de un tipo de dato numérico.</li>
+<li>Tiene prácticamente el mismo uso que <code>INT</code>, pero con la diferencia de que puede almacenar números con decimales.</li>
+</ul>
+<h3 id="tipos-de-caracteres-extendidos">Tipos de Caracteres Extendidos<a class="headerlink" href="#tipos-de-caracteres-extendidos" title="Permanent link">#</a></h3>
+<p>Si bien CHAR y VARCHAR son los más comunes, existen otros tipos para manejar cadenas de texto:
+- TEXT: Este tipo se utiliza para almacenar cadenas de caracteres. Sin embargo, se recomienda evitar su uso, junto con VARCHAR, ya que pueden consumir muchos recursos y generar problemas de rendimiento y fragmentación de datos, por lo que es mejor si es posible utilizar un tipo de dato más preciso.
+  - Ya obsoleto en favor de VARCHAR(MAX), ideal para textos muy largos que no tienen longitud fija.
+- NVARCHAR: Almacena cadenas de longitud variable con soporte Unicode (como caracteres especiales o de otros idiomas), usando 2 bytes por carácter, ideal para internacionalización pero ocupa más espacio</p>
+<h3 id="el-concepto-de-null">El Concepto de NULL<a class="headerlink" href="#el-concepto-de-null" title="Permanent link">#</a></h3>
+<p>Es importante destacar que el valor NULL no es un tipo de dato en sí mismo.</p>
+<ul>
+<li>Significado: Un valor NULL en una base de datos significa desconocido o faltante.</li>
+<li>Diferenciación: NULL es diferente de cero (0), una cadena vacía ('') o un espacio en blanco (' '). Un valor NULL no tiene un tipo de dato asociado, sino que es un marcador especial.</li>
+</ul>
+<h2 id="clave-primaria">Clave primaria<a class="headerlink" href="#clave-primaria" title="Permanent link">#</a></h2>
+<p>La <strong>Clave Primaria</strong> (<em>Primary Key</em>) es un concepto fundamental en la definición y la gestión de tablas en SQL, ya que define el identificador único de cada registro.</p>
+<p>A continuación, se detalla su rol principal y sus funciones esenciales.</p>
+<h3 id="rol-como-identificador-unico-unicidad">Rol como Identificador Único (Unicidad)<a class="headerlink" href="#rol-como-identificador-unico-unicidad" title="Permanent link">#</a></h3>
+<p>La clave primaria es una columna muy importante en cada tabla. Su rol principal es proveer un identificador único para cada fila o cliente.</p>
+<ul>
+<li>Naturaleza Única: La clave primaria es inherentemente única. Se la describe como una "huella dactilar" (fingerprint) que garantiza que no haya dos clientes que compartan el mismo ID.</li>
+<li>Integridad de Datos: Una de las razones por las que se establece una clave primaria es para garantizar la integridad de la tabla. Al definir una columna como clave primaria, se espera que sus valores sean únicos y no contengan duplicados. Si se comprueba su unicidad mediante un conteo, el resultado de cada valor debería ser, como máximo, uno.</li>
+</ul>
+<h3 id="soporte-para-conexiones-y-relaciones">Soporte para Conexiones y Relaciones<a class="headerlink" href="#soporte-para-conexiones-y-relaciones" title="Permanent link">#</a></h3>
+<p>La clave primaria es esencial para la estructura relacional de la base de datos:</p>
+<ul>
+<li>Conectabilidad: Su existencia permite que la tabla sea "conectable" a otras tablas.</li>
+<li>Combinación de Tablas: Se utiliza para combinar la tabla con otra tabla y para identificar rápidamente un cliente. En sistemas relacionales, la clave primaria define las relaciones (Primary Key y Foreign Key) necesarias para unir datos de múltiples tablas.</li>
+</ul>
+<h3 id="optimizacion-y-rendimiento">Optimización y Rendimiento<a class="headerlink" href="#optimizacion-y-rendimiento" title="Permanent link">#</a></h3>
+<p>La clave primaria tiene un impacto directo en el rendimiento de la base de datos:</p>
+<ul>
+<li>Candidato Ideal para Índices Agrupados (Clustered Index): La clave primaria es un candidato perfecto para crear un índice agrupado. Esto se debe a que cumple con los criterios de ser única y, típicamente, sus valores no se modifican con frecuencia (solo se añaden nuevos valores), lo cual evita operaciones costosas de reordenamiento de datos.</li>
+<li>Mejora del Rendimiento: Tener una clave primaria en todas las tablas es una buena práctica, ya que mejora la velocidad de búsqueda (lookups) cuando se realizan operaciones de modificación, como UPDATE o DELETE.</li>
+</ul>
+<h2 id="comentarios">Comentarios<a class="headerlink" href="#comentarios" title="Permanent link">#</a></h2>
+<p>Los comentarios en SQL son una forma de agregar notas o explicaciones dentro del código, que no se ejecutan como parte de la consulta. Son útiles para documentar el propósito de ciertas secciones del código, explicar la lógica detrás de ciertas operaciones o para deshabilitar ciertas partes del código sin eliminarlas.</p>
+<ul>
+<li>Uso: Se comienza con dos guiones (--) para comentarios de una línea o con /* */ para comentarios de varias líneas.</li>
+</ul>
+<h3 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">#</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="c1">-- Este es un comentario de una línea</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">apellido</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">empleados</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">Este es un comentario de varias líneas</span>
+<span class="cm">que se extiende por varias líneas</span>
+<span class="cm">*/</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">apellido</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">empleados</span><span class="p">;</span>
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
