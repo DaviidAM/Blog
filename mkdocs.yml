@@ -96,6 +96,8 @@ nav:
               - GANs: "Python/Keras/07 - GANs.md"
           - Pydantic:
               - "Python/pydantic/01 - modelos.md"
+          - PySpark:
+              - "Python/PySpark/01 - basic.md"
       - HTML:
           - Básico: "HTML/01 - html.md"
           - Elementos: "HTML/02 - elements.md"
